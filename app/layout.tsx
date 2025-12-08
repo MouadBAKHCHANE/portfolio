@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Outfit, Dancing_Script } from "next/font/google";
 import "./globals.css";
 
 const outfit = Outfit({ subsets: ["latin"] });
+const dancing = Dancing_Script({ subsets: ["latin"], variable: "--font-dancing" });
 
 export const metadata: Metadata = {
   title: "Mouad Bakhchane | Business Data Analyst & Financial Expert",
@@ -16,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={outfit.className}>{children}</body>
-    </html >
+      <body className={`${outfit.className} ${dancing.variable}`}>{children}</body>
+    </html>
   );
 }

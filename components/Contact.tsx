@@ -35,9 +35,10 @@ export default function Contact() {
 
                             <a
                                 href="mailto:bakhchanemouad@gmail.com"
-                                className="inline-flex items-center gap-3 px-8 py-4 bg-emerald-500 text-slate-950 rounded-xl font-bold hover:bg-emerald-400 transition-all hover:scale-105 shadow-[0_0_20px_rgba(16,185,129,0.4)]"
+                                className="inline-flex items-center gap-2 sm:gap-3 px-5 py-3 sm:px-8 sm:py-4 bg-emerald-500 text-slate-950 rounded-xl font-bold text-sm sm:text-base hover:bg-emerald-400 transition-all hover:scale-105 shadow-[0_0_20px_rgba(16,185,129,0.4)]"
                             >
-                                <Mail size={20} />
+                                <Mail size={18} className="sm:hidden" />
+                                <Mail size={20} className="hidden sm:block" />
                                 bakhchanemouad@gmail.com
                             </a>
                         </motion.div>
@@ -46,9 +47,9 @@ export default function Contact() {
 
                 {/* Footer Links */}
                 <div className="flex flex-col md:flex-row justify-between items-center py-8 border-t border-white/5">
-                    <div className="mb-4 md:mb-0">
-                        <span className="font-bold text-xl tracking-tight text-white">Mouad<span className="text-emerald-400">.Data</span></span>
-                        <p className="text-slate-500 text-sm mt-1">© {new Date().getFullYear()} All rights reserved.</p>
+                    <div className="mb-4 md:mb-0 flex items-baseline gap-2">
+                        <span className="font-bold text-xl tracking-tight text-white">Data</span>
+                        <span className="text-emerald-400 text-2xl font-[family-name:var(--font-dancing)]">with Mouad</span>
                     </div>
 
                     <div className="flex items-center gap-4">

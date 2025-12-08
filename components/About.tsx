@@ -95,11 +95,11 @@ export default function About() {
 
                             <div className="grid grid-cols-4 gap-4 mb-8">
                                 {techStack.map((tech, i) => (
-                                    <div key={tech.name} className="flex flex-col items-center justify-center p-3 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors aspect-square">
-                                        <div className="w-12 h-12 relative mb-2">
+                                    <div key={tech.name} className="flex flex-col items-center justify-center p-2 sm:p-3 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors aspect-square">
+                                        <div className="w-8 h-8 sm:w-12 sm:h-12 relative mb-1 sm:mb-2">
                                             <img src={tech.src} alt={tech.name} className="w-full h-full object-contain" />
                                         </div>
-                                        <span className="text-slate-400 font-medium text-[10px] text-center leading-tight">{tech.name}</span>
+                                        <span className="text-slate-400 font-medium text-[8px] sm:text-[10px] text-center leading-tight">{tech.name}</span>
                                     </div>
                                 ))}
                             </div>
