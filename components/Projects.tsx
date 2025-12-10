@@ -6,27 +6,43 @@ import Link from "next/link";
 
 const projects = [
     {
-        title: "\"Single Source of Truth\" Financial Factory",
-        category: "Data Engineering",
-        description: "Automated the entire financial reporting pipeline for an SME. Replaced 15 hours of manual Excel work with a 100% automated dbt & BigQuery engine.",
-        tags: ["dbt", "BigQuery", "Fivetran", "Power BI"],
-        color: "from-emerald-500/20 to-teal-500/20",
-        links: { demo: "#", code: "#" }
-    },
-    {
-        title: "Customer LTV & Churn Prediction Hub",
+        title: "Churn Prediction",
         category: "Machine Learning",
-        description: "Built a 'Risk Radar' dashboard using Logistic Regression to predict which high-value customers were likely to churn, enabling proactive retention.",
-        tags: ["Python", "Scikit-Learn", "SQL", "Dataiku"],
-        color: "from-teal-500/20 to-cyan-500/20",
-        links: { demo: "#", code: "#" }
+        description: "Identify customers likely to leave and retain them proactively. Built a binary classification model to predict churn risk and enable proactive retention strategies.",
+        tags: ["Python", "Pandas", "XGBoost", "SHAP", "Power BI"],
+        color: "from-rose-500/20 to-orange-500/20",
+        links: { demo: "#", code: "https://github.com/MouadBAKHCHANE" }
     },
     {
-        title: "US Equities Analysis & ETL Platform",
-        category: "Financial Analytics",
-        description: "Market analysis tool fetching real-time data from FMP API. Calculates Sharpe ratios and optimizes asset allocation using Modern Portfolio Theory.",
-        tags: ["Python", "yFinance", "Pandas", "Streamlit"],
-        color: "from-green-500/20 to-emerald-500/20",
+        title: "Dynamic Pricing",
+        category: "Optimization",
+        description: "Adjust prices based on demand, time, or competitor data. Implemented regression and optimization models to maximize revenue dynamically.",
+        tags: ["Python", "Prophet", "APIs", "Dash", "Streamlit"],
+        color: "from-amber-500/20 to-yellow-500/20",
+        links: { demo: "#", code: "https://github.com/MouadBAKHCHANE" }
+    },
+    {
+        title: "Demand Forecasting",
+        category: "Time Series",
+        description: "Predict future product demand to manage inventory. Built forecasting models using ARIMA and LSTM to optimize stock levels and reduce waste.",
+        tags: ["Python", "Prophet", "Power BI", "Excel", "SQL"],
+        color: "from-emerald-500/20 to-teal-500/20",
+        links: { demo: "#", code: "https://github.com/MouadBAKHCHANE" }
+    },
+    {
+        title: "Recommendation System",
+        category: "Collaborative Filtering",
+        description: "Suggest products/content to increase engagement or purchases. Implemented collaborative filtering and ML-based recommendations using graph databases.",
+        tags: ["Python", "LightFM", "TensorFlow", "Neo4j"],
+        color: "from-cyan-500/20 to-blue-500/20",
+        links: { demo: "#", code: "https://github.com/MouadBAKHCHANE" }
+    },
+    {
+        title: "Marketing Response",
+        category: "Classification",
+        description: "Predict customer likelihood to respond to campaigns. Built classification models to optimize targeting and improve marketing ROI.",
+        tags: ["Python", "Scikit-learn", "SQL", "Power BI", "SHAP"],
+        color: "from-violet-500/20 to-purple-500/20",
         links: { demo: "#", code: "https://github.com/MouadBAKHCHANE" }
     }
 ];
