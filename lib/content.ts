@@ -12,10 +12,10 @@ export const content = {
             role: "Data & BI Consultant"
         },
         hero: {
-            availability: "Available for Freelance Missions",
-            title_start: "Transforming Data into",
-            title_highlight: "Business Value",
-            subtitle: "Freelance Business Data Analyst & Financial Market Expert specialized in Power BI, Snowflake, and Modern Data Stack.",
+            greeting: "Hello,",
+            name_prefix: "I am",
+            name: "Mouad Bakhchane",
+            intro_text: "Companies call me when their BI has become unmanageable: inconsistent figures, fragile pipelines, unreadable dashboards, uncontrolled KPIs.",
             cta_primary: "View My Work",
             cta_secondary: "Contact Me"
         },
@@ -42,37 +42,53 @@ export const content = {
             title_highlight: "Expertise",
             items: [
                 {
-                    title: "Power BI Dashboards",
-                    description: "Transforming raw data into clear visual insights.",
-                    points: [
-                        "Star Schema Modeling",
-                        "Advanced DAX & Optimization",
-                        "Security (RLS) & Governance",
-                        "Report Builder (Paginated Reports)"
-                    ]
+                    title: "BI Architecture & Modeling",
+                    description: "Robust star schemas, clear KPIs, reliable and readable BI.",
+                    points: []
                 },
                 {
-                    title: "Modern Data Stack",
-                    description: "Robust architecture for reliable and scalable data.",
-                    points: [
-                        "Snowflake & Microsoft Fabric",
-                        "High-Performance SQL Pipelines",
-                        "DWH Modeling (Data Warehousing)",
-                        "Data Quality & Documentation"
-                    ]
+                    title: "Industrialization & Stabilization",
+                    description: "Stable pipelines, simple governance, BI that stops breaking.",
+                    points: []
                 },
                 {
-                    title: "Analytics Engineering",
-                    description: "The technical bridge between data and business.",
-                    points: [
-                        "Python Automation & Scripts",
-                        "CI/CD & Azure DevOps",
-                        "dbt Transformation",
-                        "Business Adoption Support"
-                    ]
+                    title: "Complete Analytics Chain",
+                    description: "SQL/Python, ingestion, optimization, and ultra-fast refresh.",
+                    points: []
                 }
+            ],
+            side_title: "How I Help",
+            side_para1: "I rebuild BI systems that have become complex, slow, or difficult to manage. From business understanding to production deployment, I ensure model refactoring, pipeline reliability (SQL/Power BI), and performance optimization for clear, fast, and actionable figures.",
+            side_para2: "I work in demanding data environments: tech, media, music, advertising, industry.",
+            side_para3: "My interventions focus on BI reconstruction, KPI harmonization, refresh time reduction, and establishing sustainable governance.",
+            stats: [
+                { value: "30+", label: "BI Systems Rebuilt or Industrialized" },
+                { value: "15 min", label: "Refresh Time Achieved (vs 18h before)" }
             ]
         },
+        howWeWork: {
+            title: "How We Work Together",
+            subtitle: "Three clear steps to get your BI back on track, from diagnosis to team adoption.",
+            steps: [
+                {
+                    title: "BI Diagnosis",
+                    description: "Model analysis, KPIs, pipelines, performance, governance.",
+                    deliverable: "Deliverable: Current state + Prioritized action plan."
+                },
+                {
+                    title: "Complete Reconstruction",
+                    description: "Model, SQL, Snowflake, Power BI, security, industrialization.",
+                    deliverable: "Deliverable: Rebuilt BI, documented, ready to scale."
+                },
+                {
+                    title: "Adoption & Transfer",
+                    description: "Documentation, training, support for management & teams.",
+                    deliverable: "Deliverable: Autonomous teams, governance in place."
+                }
+            ],
+            cta: "Let's Talk"
+        },
+
         about: {
             badge: "About Me",
             title_start: "Bridging the Gap Between",
@@ -173,10 +189,10 @@ export const content = {
             role: "Consultant Data & BI"
         },
         hero: {
-            availability: "Disponible pour Missions Freelance",
-            title_start: "Transformer la Data en",
-            title_highlight: "Valeur Business",
-            subtitle: "Business Data Analyst Freelance & Expert Marchés Financiers spécialisé en Power BI, Snowflake et Modern Data Stack.",
+            greeting: "Hello,",
+            name_prefix: "Je suis",
+            name: "Mouad Bakhchane",
+            intro_text: "Les entreprises m'appellent quand leur BI est devenue ingérable : chiffres incohérents, pipelines fragiles, dashboards illisibles, KPI non maîtrisés.",
             cta_primary: "Voir mon travail",
             cta_secondary: "Me Contacter"
         },
@@ -203,36 +219,52 @@ export const content = {
             title_highlight: "d'Expertise",
             items: [
                 {
-                    title: "Dashboards Power BI",
-                    description: "Transformation de données brutes en insights visuels clairs.",
-                    points: [
-                        "Modélisation en étoile (Star Schema)",
-                        "Mesures DAX avancées & optimisation",
-                        "Sécurité (RLS) & Gouvernance",
-                        "Report Builder (Paginated Reports)"
-                    ]
+                    title: "Architecture BI & Modélisation décisionnelle",
+                    description: "Modèles robustes, KPI clairs, BI lisible et fiable.",
+                    points: []
                 },
                 {
-                    title: "Modern Data Stack",
-                    description: "Architecture robuste pour des données fiables et scalables.",
-                    points: [
-                        "Snowflake & Microsoft Fabric",
-                        "Pipelines SQL performants",
-                        "Modélisation DWH (Data Warehousing)",
-                        "Qualité de données & Documentation"
-                    ]
+                    title: "Industrialisation & Stabilisation BI",
+                    description: "Pipelines stables, gouvernance simple, BI qui ne casse plus.",
+                    points: []
                 },
                 {
-                    title: "Analytics Engineering",
-                    description: "Le pont technique entre la donnée et le métier.",
-                    points: [
-                        "Automatisation Python & Scripts",
-                        "CI/CD & DevOps Azure",
-                        "Transformation dbt",
-                        "Accompagnement adoption métier"
-                    ]
+                    title: "Chaîne analytique complète",
+                    description: "SQL/Python, ingestion, optimisation et refresh ultra-rapide.",
+                    points: []
                 }
+            ],
+            side_title: "Comment j'aide",
+            side_para1: "Je reconstruis des systèmes BI devenus complexes, lents ou difficiles à exploiter. De la compréhension métier à la mise en production, j'assure la refonte des modèles, la fiabilisation des pipelines SQL/Power BI et l'optimisation des performances pour des chiffres clairs, rapides et actionnables.",
+            side_para2: "J'interviens dans des environnements data exigeants : tech, média, musique, publicité, industrie.",
+            side_para3: "Mes interventions portent sur la reconstruction BI, l'harmonisation des KPI, la réduction des temps de refresh et la mise en place d'une gouvernance durable.",
+            stats: [
+                { value: "30+", label: "Systèmes BI reconstruits ou industrialisés" },
+                { value: "15 min", label: "Temps de refresh obtenu (vs 18 h auparavant)" }
             ]
+        },
+
+        howWeWork: {
+            title: "Comment on travaille ensemble",
+            subtitle: "Trois blocs clairs pour remettre votre BI sur pied, du diagnostic à l'adoption par les équipes.",
+            steps: [
+                {
+                    title: "Diagnostic BI",
+                    description: "Analyse modèle, KPI, pipelines, performance, gouvernance.",
+                    deliverable: "Livrable : état des lieux + plan d'action priorisé."
+                },
+                {
+                    title: "Reconstruction complète",
+                    description: "Modèle, SQL, Snowflake, Power BI, sécurité, industrialisation.",
+                    deliverable: "Livrable : BI reconstruite, documentée, prête à scaler."
+                },
+                {
+                    title: "Adoption & transfert",
+                    description: "Documentation, formation, accompagnement directions & équipes.",
+                    deliverable: "Livrable : équipes autonomes, gouvernance en place."
+                }
+            ],
+            cta: "Discutons"
         },
         about: {
             badge: "À Propos",
