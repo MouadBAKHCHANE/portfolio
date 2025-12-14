@@ -69,7 +69,7 @@ export default function Hero({ content }: HeroProps) {
                     className="flex flex-col sm:flex-row gap-6 items-center mb-20"
                 >
                     <Link
-                        href="#id_contact"
+                        href="#id_projects"
                         className="group pl-1 pr-8 py-1.5 bg-emerald-500 text-slate-900 rounded-full font-bold hover:bg-emerald-400 transition-all flex items-center gap-4 text-lg shadow-[0_0_40px_rgba(16,185,129,0.4)] hover:shadow-[0_0_60px_rgba(16,185,129,0.6)] hover:scale-105"
                     >
                         <div className="w-12 h-12 rounded-full bg-black/10 flex items-center justify-center group-hover:bg-black/20 transition-colors">
@@ -78,7 +78,7 @@ export default function Hero({ content }: HeroProps) {
                         {cta_primary}
                     </Link>
                     <Link
-                        href="#id_projects"
+                        href="#id_contact"
                         className="px-8 py-4 bg-transparent border border-emerald-500/30 text-emerald-400 rounded-full font-medium hover:bg-emerald-500/10 hover:border-emerald-500/60 transition-all flex items-center gap-2 backdrop-blur-sm"
                     >
                         {cta_secondary}

@@ -58,6 +58,10 @@ export default function Contact({ content }: ContactProps) {
                         <span className="text-emerald-400 text-2xl font-[family-name:var(--font-dancing)]">{logo_sub}</span>
                     </div>
 
+                    <div className="text-slate-500 text-sm">
+                        © 2025 All rights reserved.
+                    </div>
+
                     <div className="flex items-center gap-4">
                         <Link href="https://www.linkedin.com/in/mouad-bakhchane/" className="p-3 bg-white/5 border border-white/5 rounded-full text-slate-300 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
                             <Linkedin size={20} />
