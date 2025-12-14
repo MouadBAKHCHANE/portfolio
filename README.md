@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mouad Bakhchane | Data & BI Consultant
 
-## Getting Started
+**Senior Data & BI Consultant** specializing in building reliable, high-performance data systems that drive business decisions.
 
-First, run the development server:
+![Banner](/public/banner.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 About This Portfolio
+This repository hosts my professional portfolio website, built with **Next.js 15**, **Tailwind CSS**, and **framer-motion**. It showcases my approach to data engineering, analytics, and business intelligence.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Live Demo**: [mouad-bakhchane-portfolio.vercel.app](https://mouad-bakhchane-portfolio.vercel.app)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🏆 Featured Project: AI-Powered Churn Retention System
+> **"Gold Standard" Case Study (Fall 2025)**
 
-## Learn More
+This repository includes the full code for my **end-to-end customer churn prediction system**, designed to transform reactive retention into a proactive revenue engine.
 
-To learn more about Next.js, take a look at the following resources:
+### Key Features
+- **Snowflake Architecture**: Single Source of Truth for customer data.
+- **XGBoost Model**: State-of-the-art binary classification (Acc: 87%, AUC: 0.92).
+- **ROI Calculator**: Simulates business financial impact ($190k/mo savings).
+- **Salesforce Integration**: Mock capabilities for CRM activation.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### How to Run the Model
+1. **Navigate to the root directory**.
+2. **Install Python dependencies**:
+   ```bash
+   pip install pandas xgboost scikit-learn seaborn matplotlib
+   ```
+3. **Run the pipeline**:
+   ```bash
+   python churn_prediction_model.py
+   ```
+   *Note: The script runs in "Snowflake Simulation Mode" using a local CSV extract (`Telco_Churn_Enrichi_GCP.csv`) for portability.*
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Visual Results
+| Feature Importance | Confusion Matrix |
+| :---: | :---: |
+| ![Feature Importance](churn_feature_importance.png) | ![Confusion Matrix](churn_confusion_matrix.png) |
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠 Tech Stack
+- **Frontend**: Next.js 15, React, TypeScript, Tailwind CSS
+- **Data Engineering**: Python, SQL, dbt, Snowflake
+- **Machine Learning**: XGBoost, Scikit-Learn
+- **Visualization**: Power BI, Matplotlib/Seaborn
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📬 Contact
+**Mouad Bakhchane**  
+*Available for freelance opportunities*  
+[LinkedIn](https://linkedin.com/in/mouadbakhchane) | [Email](mailto:contact@mouad-data.com)

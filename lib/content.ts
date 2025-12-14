@@ -140,9 +140,11 @@ export const content = {
             view_project: "View Project",
             items: [
                 {
-                    title: "Churn Prediction",
-                    category: "Machine Learning",
-                    description: "Identify customers likely to leave and retain them proactively. Built a binary classification model to predict churn risk and enable proactive retention strategies.",
+                    title: "AI-Powered Churn Retention System",
+                    category: "Machine Learning & Analytics Engineering",
+                    description: "End-to-end pipeline to predict & prevent customer churn. Transformed reactive retention into a proactive revenue-saving engine. Built a complete churn prediction engine. Ingested data into Snowflake with dbt for feature engineering (50+ features). Deployed an XGBoost model to score customers weekly. High-risk customers are automatically flagged in Salesforce for the retention team.",
+                    tags: ["Python", "XGBoost", "Snowflake", "dbt", "Power BI"],
+                    impact: ["Reduced Churn by 12%", "$2M+ Annual Revenue Saved", "Automated CRM Feed"]
                 },
                 {
                     title: "Dynamic Pricing",
@@ -317,9 +319,11 @@ export const content = {
             view_project: "Voir le Projet",
             items: [
                 {
-                    title: "Prédiction de Churn",
-                    category: "Machine Learning",
-                    description: "Identifier les clients susceptibles de partir et les retenir proactivement. Modèle de classification binaire pour prédire le risque de départ.",
+                    title: "Système de Rétention & Prédiction de Churn",
+                    category: "Machine Learning & Analytics Engineering",
+                    description: "Pipeline complet pour prédire et prévenir le désabonnement. Transformation d'une rétention réactive en un moteur proactif de sauvegarde de revenus. Ingestion des données dans Snowflake, features engineering avec dbt. Déploiement d'un modèle XGBoost pour scorer les clients. Les profils à risque sont flaggés automatiquement dans Salesforce.",
+                    tags: ["Python", "XGBoost", "Snowflake", "dbt", "Power BI"],
+                    impact: ["-12% de Taux de Churn", "2M$+ de CA Sauvegardé", "Feed CRM Automatisé"]
                 },
                 {
                     title: "Pricing Dynamique",

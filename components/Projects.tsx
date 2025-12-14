@@ -50,9 +50,29 @@ export default function Projects({ content }: ProjectsProps) {
                                     {project.description}
                                 </p>
 
-                                <div className="flex flex-wrap gap-2 mb-8">
-                                    {/* Mock tags for now, or add to content dictionary later if precise tags needed per lang */}
+                                <div className="flex flex-wrap gap-2 mb-6">
+                                    {project.tags?.map((tag: string, i: number) => (
+                                        <span key={i} className="px-2 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-slate-300 font-mono">
+                                            {tag}
+                                        </span>
+                                    ))}
                                 </div>
+
+                                {project.impact && (
+                                    <div className="mb-6 p-4 bg-emerald-500/5 border border-emerald-500/20 rounded-xl">
+                                        <div className="flex items-center gap-2 mb-3">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></div>
+                                            <span className="text-xs font-bold text-emerald-400 uppercase tracking-widest">Impact Business</span>
+                                        </div>
+                                        <ul className="space-y-2">
+                                            {project.impact.map((item: string, i: number) => (
+                                                <li key={i} className="flex items-start gap-2 text-sm text-slate-300 leading-tight">
+                                                    <span className="text-emerald-500/50 mt-0.5">➢</span> {item}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
 
                                 <Link href="#" className="w-full py-3 rounded-xl bg-white/5 border border-white/10 text-white font-semibold flex items-center justify-center gap-2 hover:bg-emerald-500 hover:text-slate-950 hover:border-emerald-500 transition-all">
                                     {view_project} <ArrowUpRight size={18} />
