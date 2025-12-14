@@ -4,7 +4,13 @@ import { Mail, Linkedin, Github, CalendarCheck, ArrowRight } from "lucide-react"
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-export default function Contact() {
+interface ContactProps {
+    content: any;
+}
+
+export default function Contact({ content }: ContactProps) {
+    const { badge, title_start, title_highlight, subtitle, email_button, logo_text, logo_sub } = content;
+
     return (
         <footer id="id_contact" className="bg-slate-950 text-white pt-24 pb-8 border-t border-white/5">
             <div className="container mx-auto px-6">
@@ -22,15 +28,15 @@ export default function Contact() {
                             viewport={{ once: true }}
                         >
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-sm font-medium mb-6">
-                                <CalendarCheck size={16} /> Available for Freelance
+                                <CalendarCheck size={16} /> {badge}
                             </div>
 
                             <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-                                Ready to automate your <br />
-                                <span className="text-emerald-400">financial reporting?</span>
+                                {title_start} <br />
+                                <span className="text-emerald-400">{title_highlight}</span>
                             </h2>
                             <p className="text-lg text-slate-400 mb-10 max-w-xl mx-auto">
-                                Let's discuss how we can turn your manual Excel sheets into always-on dashboards.
+                                {subtitle}
                             </p>
 
                             <a
@@ -39,7 +45,7 @@ export default function Contact() {
                             >
                                 <Mail size={18} className="sm:hidden" />
                                 <Mail size={20} className="hidden sm:block" />
-                                bakhchanemouad@gmail.com
+                                {email_button}
                             </a>
                         </motion.div>
                     </div>
@@ -48,8 +54,8 @@ export default function Contact() {
                 {/* Footer Links */}
                 <div className="flex flex-col md:flex-row justify-between items-center py-8 border-t border-white/5">
                     <div className="mb-4 md:mb-0 flex items-baseline gap-2">
-                        <span className="font-bold text-xl tracking-tight text-white">Data</span>
-                        <span className="text-emerald-400 text-2xl font-[family-name:var(--font-dancing)]">with Mouad</span>
+                        <span className="font-bold text-xl tracking-tight text-white">{logo_text}</span>
+                        <span className="text-emerald-400 text-2xl font-[family-name:var(--font-dancing)]">{logo_sub}</span>
                     </div>
 
                     <div className="flex items-center gap-4">

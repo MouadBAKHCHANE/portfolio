@@ -1,19 +1,26 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
+import Testimonials from "@/components/Testimonials";
 import Projects from "@/components/Projects";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import WhenToCall from "@/components/WhenToCall";
+import Expertise from "@/components/Expertise";
+import { content } from "@/lib/content";
 
 export default function Home() {
+  const t = content.en;
+
   return (
     <main className="bg-slate-950 min-h-screen text-slate-200">
-      <Navbar />
-      <Hero />
-      <About />
-      <Services />
-      <Projects />
-      <Contact />
+      <Navbar content={t.navbar} lang="en" />
+      <Hero content={t.hero} />
+      <WhenToCall content={t.whenToCall} />
+      <Expertise content={t.expertise} />
+      <About content={t.about} />
+      <Projects content={t.projects} />
+      <Testimonials content={t.testimonials} />
+      <Contact content={t.contact} />
     </main>
   );
 }

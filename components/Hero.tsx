@@ -11,7 +11,13 @@ import Image from "next/image"; // Assuming we might use Next.js Image later, im
 // Tech Logos
 // Stack removed, replaced by single badge inline
 
-export default function Hero() {
+interface HeroProps {
+    content: any;
+}
+
+export default function Hero({ content }: HeroProps) {
+    const { availability, title_start, title_highlight, subtitle, cta_primary, cta_secondary } = content;
+
     return (
         <section id="id_home" className="relative pt-48 pb-32 overflow-hidden bg-slate-950 min-h-screen flex flex-col items-center justify-center">
             {/* Background Gradients (Matched to Reference) */}
@@ -29,7 +35,7 @@ export default function Hero() {
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8 hover:bg-white/10 transition-colors cursor-default"
                 >
                     <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
-                    <span className="text-slate-300 text-sm font-medium">Business Data Analyst & Financial Expert</span>
+                    <span className="text-slate-300 text-sm font-medium">{availability}</span>
                 </motion.div>
 
                 {/* Main Headline */}
@@ -39,8 +45,10 @@ export default function Hero() {
                     transition={{ duration: 0.5, delay: 0.1 }}
                     className="text-5xl lg:text-8xl font-bold tracking-tight mb-6"
                 >
-                    <span className="text-emerald-400">Data</span> & <span className="text-white">BI</span> <br />
-                    <span className="text-white">Consultant</span>
+                    {title_start} <br />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
+                        {title_highlight}
+                    </span>
                 </motion.h1>
 
                 {/* Subheadline */}
@@ -50,7 +58,7 @@ export default function Hero() {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="text-lg md:text-2xl text-slate-400 mb-12 max-w-2xl font-light"
                 >
-                    Turning complex data into <span className="text-emerald-300 font-medium">decision-making</span> power.
+                    {subtitle}
                 </motion.p>
 
                 {/* CTA Buttons */}
@@ -67,13 +75,13 @@ export default function Hero() {
                         <div className="w-12 h-12 rounded-full bg-black/10 flex items-center justify-center group-hover:bg-black/20 transition-colors">
                             <User size={24} className="text-slate-900" />
                         </div>
-                        Let's Talk
+                        {cta_primary}
                     </Link>
                     <Link
                         href="#id_projects"
                         className="px-8 py-4 bg-transparent border border-emerald-500/30 text-emerald-400 rounded-full font-medium hover:bg-emerald-500/10 hover:border-emerald-500/60 transition-all flex items-center gap-2 backdrop-blur-sm"
                     >
-                        Case Studies
+                        {cta_secondary}
                     </Link>
                 </motion.div>
 

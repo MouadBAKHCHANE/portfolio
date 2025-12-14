@@ -19,7 +19,13 @@ const techStack = [
     { name: "Machine Learning", src: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" },
 ];
 
-export default function About() {
+interface AboutProps {
+    content: any;
+}
+
+export default function About({ content }: AboutProps) {
+    const { badge, title_start, title_highlight, bio_p1, bio_p2, stats, tech_arsenal, certifications: certsTitle, certs } = content;
+
     return (
         <section id="id_about" className="py-24 bg-slate-900 border-y border-white/5">
             <div className="container mx-auto px-6">
@@ -32,15 +38,15 @@ export default function About() {
                         viewport={{ once: true }}
                         className="lg:w-1/2"
                     >
-                        <h2 className="text-sm font-bold text-emerald-400 tracking-widest uppercase mb-3">About Me</h2>
+                        <h2 className="text-sm font-bold text-emerald-400 tracking-widest uppercase mb-3">{badge}</h2>
                         <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                            Finance at Heart, <br /> Data in Action
+                            {title_start} <br /> {title_highlight}
                         </h3>
                         <p className="text-slate-300 text-lg mb-6 leading-relaxed">
-                            I am a <strong>Business Data Analyst</strong> with a deep background in Finance and Accounting. Unlike generalist data scientists, I understand the P&L, the Balance Sheet, and the business logic behind the numbers.
+                            {bio_p1}
                         </p>
                         <p className="text-slate-400 mb-8 leading-relaxed">
-                            With experience at <strong>Innovu Studio</strong> and <strong>Bakco Import</strong>, I have successfully optimized assets using Modern Portfolio Theory and reduced operational costs through improved data visibility.
+                            {bio_p2}
                         </p>
 
                         <div className="space-y-6">
@@ -49,8 +55,8 @@ export default function About() {
                                     <Briefcase size={24} />
                                 </div>
                                 <div>
-                                    <h4 className="text-white font-bold">5+ Years Experience</h4>
-                                    <p className="text-slate-500 text-sm">Working with Financial Data & Market Analysis</p>
+                                    <h4 className="text-white font-bold">{stats[0].value}</h4>
+                                    <p className="text-slate-500 text-sm">{stats[0].label}</p>
                                 </div>
                             </div>
                             <div className="flex gap-4">
@@ -58,8 +64,8 @@ export default function About() {
                                     <Award size={24} />
                                 </div>
                                 <div>
-                                    <h4 className="text-white font-bold">Certified Expert</h4>
-                                    <p className="text-slate-500 text-sm">Masters in Finance & AI Data Science Certified</p>
+                                    <h4 className="text-white font-bold">{stats[1].value}</h4>
+                                    <p className="text-slate-500 text-sm">{stats[1].label}</p>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +96,7 @@ export default function About() {
                             <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl -mr-10 -mt-10"></div>
 
                             <h4 className="text-white font-bold mb-6 flex items-center gap-2">
-                                <Database size={20} className="text-emerald-400" /> Technical Arsenal
+                                <Database size={20} className="text-emerald-400" /> {tech_arsenal}
                             </h4>
 
                             <div className="grid grid-cols-4 gap-4 mb-8">
@@ -105,16 +111,16 @@ export default function About() {
                             </div>
 
                             <h4 className="text-white font-bold mb-6 flex items-center gap-2">
-                                <GraduationCap size={20} className="text-teal-400" /> Education & Certs
+                                <GraduationCap size={20} className="text-teal-400" /> {certsTitle}
                             </h4>
 
                             <div className="space-y-3">
-                                {certifications.map((cert, i) => (
+                                {certs.map((cert: string, i: number) => (
                                     <div key={i} className="flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-white/5 to-white/0 border border-white/5">
-                                        <div className="text-emerald-400">{cert.icon}</div>
+                                        <div className="text-emerald-400"><Award size={16} /></div>
                                         <div>
-                                            <div className="text-white font-semibold text-sm">{cert.name}</div>
-                                            <div className="text-slate-500 text-xs">{cert.issuer}</div>
+                                            <div className="text-white font-semibold text-sm">{cert}</div>
+                                            <div className="text-slate-500 text-xs">Microsoft</div>
                                         </div>
                                     </div>
                                 ))}

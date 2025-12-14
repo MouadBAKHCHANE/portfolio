@@ -3,20 +3,19 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, Linkedin, User } from "lucide-react";
+import { Menu, X, Linkedin, User, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
-const navLinks = [
-    { name: "Resume", href: "#id_about" },
-    { name: "Case Studies", href: "#id_projects" },
-    { name: "Resources", href: "#id_services" }, // Mapping Services to Resources to match ref text
-    { name: "Contact", href: "#id_contact" },
-];
+interface NavbarProps {
+    content: any;
+    lang: "en" | "fr";
+}
 
-export default function Navbar() {
+export default function Navbar({ content, lang }: NavbarProps) {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const { links, cta, role } = content;
 
     useEffect(() => {
         const handleScroll = () => {
@@ -25,6 +24,12 @@ export default function Navbar() {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    const toggleLang = () => {
+        // Simple client-side redirect for now
+        if (lang === "en") window.location.href = "/fr";
+        else window.location.href = "/";
+    };
 
     return (
         <nav className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
@@ -35,7 +40,7 @@ export default function Navbar() {
                 )}
             >
                 {/* Left: Identity */}
-                <Link href="/" className="flex items-center gap-3 decoration-transparent group">
+                <Link href={lang === "fr" ? "/fr" : "/"} className="flex items-center gap-3 decoration-transparent group">
                     <div className="w-10 h-10 rounded-full border border-white/10 overflow-hidden relative">
                         <Image
                             src="/avatar.png"
@@ -46,13 +51,13 @@ export default function Navbar() {
                     </div>
                     <div className="flex flex-col">
                         <span className="font-bold text-white text-sm leading-none group-hover:text-emerald-400 transition-colors">Mouad Bakhchane</span>
-                        <span className="text-[10px] text-emerald-400 uppercase tracking-wider font-medium mt-1">Data & BI Consultant</span>
+                        <span className="text-[10px] text-emerald-400 uppercase tracking-wider font-medium mt-1">{role}</span>
                     </div>
                 </Link>
 
                 {/* Center: Nav Links */}
                 <div className="hidden md:flex items-center gap-8">
-                    {navLinks.map((link) => (
+                    {links.map((link: any) => (
                         <Link
                             key={link.name}
                             href={link.href}
@@ -66,6 +71,9 @@ export default function Navbar() {
 
                 {/* Right: Actions */}
                 <div className="hidden md:flex items-center gap-4">
+                    <button onClick={toggleLang} className="text-slate-400 hover:text-white transition-colors flex items-center gap-1 font-medium text-xs uppercase border border-white/10 rounded-full px-2 py-1">
+                        <Globe size={14} /> {lang === "en" ? "FR" : "EN"}
+                    </button>
                     <Link href="https://linkedin.com" className="text-white hover:text-emerald-400 transition-colors">
                         <Linkedin size={20} />
                     </Link>
@@ -76,7 +84,7 @@ export default function Navbar() {
                         <div className="w-8 h-8 rounded-full bg-black/10 flex items-center justify-center">
                             <User size={18} className="text-slate-900" />
                         </div>
-                        <span className="text-sm">Let's Talk</span>
+                        <span className="text-sm">{cta}</span>
                     </Link>
                 </div>
 
@@ -99,7 +107,10 @@ export default function Navbar() {
                         className="absolute top-20 left-4 right-4 bg-slate-900 border border-white/10 rounded-2xl p-4 shadow-xl md:hidden"
                     >
                         <div className="flex flex-col gap-2">
-                            {navLinks.map((link) => (
+                            <button onClick={toggleLang} className="self-end text-slate-400 hover:text-white transition-colors flex items-center gap-2 font-medium text-sm border border-white/10 rounded-full px-3 py-1 mb-2">
+                                <Globe size={16} /> Switch to {lang === "en" ? "French" : "English"}
+                            </button>
+                            {links.map((link: any) => (
                                 <Link
                                     key={link.name}
                                     href={link.href}
@@ -115,7 +126,7 @@ export default function Navbar() {
                                 onClick={() => setIsOpen(false)}
                                 className="p-3 rounded-lg bg-emerald-500 text-slate-900 font-bold text-center"
                             >
-                                Let's Talk
+                                {cta}
                             </Link>
                         </div>
                     </motion.div>
