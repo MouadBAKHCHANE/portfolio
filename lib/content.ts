@@ -99,17 +99,20 @@ export const content = {
                 {
                     quote: "Mouad transformed our manual reporting into a war machine. What took us 2 days now takes 2 minutes.",
                     author: "Sarah Martin",
-                    role: "CFO, TechFlow Solutions"
+                    role: "CFO, TechFlow Solutions",
+                    image: "/testimonials/sarah.png"
                 },
                 {
                     quote: "The audit of our data pipelines revealed critical flaws. Thanks to his intervention, our KPIs are finally 100% reliable.",
                     author: "Thomas Dubois",
-                    role: "Head of Data, RetailConnect"
+                    role: "Head of Data, RetailConnect",
+                    image: "/testimonials/thomas.png"
                 },
                 {
                     quote: "Rare technical expertise coupled with real business understanding. An indispensable partner for our growth.",
                     author: "Elise Renard",
-                    role: "COO, GreenEnergy Corp"
+                    role: "COO, GreenEnergy Corp",
+                    image: "/testimonials/elise.png"
                 }
             ]
         },
@@ -257,17 +260,20 @@ export const content = {
                 {
                     quote: "Mouad a transformé notre reporting manuel en une machine de guerre. Ce qui nous prenait 2 jours ne prend plus que 2 minutes.",
                     author: "Sarah Martin",
-                    role: "CFO, TechFlow Solutions"
+                    role: "CFO, TechFlow Solutions",
+                    image: "/testimonials/sarah.png"
                 },
                 {
                     quote: "L'audit de nos pipelines de données a révélé des failles critiques. Grâce à son intervention, nos KPI sont enfin fiables à 100%.",
                     author: "Thomas Dubois",
-                    role: "Head of Data, RetailConnect"
+                    role: "Head of Data, RetailConnect",
+                    image: "/testimonials/thomas.png"
                 },
                 {
                     quote: "Expertise technique rare couplée à une vraie compréhension des enjeux business. Un partenaire indispensable pour notre croissance.",
                     author: "Elise Renard",
-                    role: "COO, GreenEnergy Corp"
+                    role: "COO, GreenEnergy Corp",
+                    image: "/testimonials/elise.png"
                 }
             ]
         },
