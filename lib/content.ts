@@ -146,6 +146,7 @@ export const content = {
                     stack: ["Python", "Pandas", "Scikit-learn", "Streamlit"],
                     githubLink: "https://github.com/MouadBAKHCHANE/Churn-Prediction",
                     demoLink: "https://mouadbakhchane-data-portfolio-dashboard-t8mqrg.streamlit.app/",
+                    image: "/projects/churn-prediction.png",
                 },
                 {
                     title: "Dynamic Pricing",
@@ -326,6 +327,7 @@ export const content = {
                     stack: ["Python", "Pandas", "Scikit-learn", "Streamlit"],
                     githubLink: "https://github.com/MouadBAKHCHANE/Churn-Prediction",
                     demoLink: "https://mouadbakhchane-data-portfolio-dashboard-t8mqrg.streamlit.app/",
+                    image: "/projects/churn-prediction.png",
                 },
                 {
                     title: "Pricing Dynamique",
