@@ -143,6 +143,9 @@ export const content = {
                     title: "Churn Prediction",
                     category: "Machine Learning",
                     description: "Identify customers likely to leave and retain them proactively. Built a binary classification model to predict churn risk and enable proactive retention strategies.",
+                    stack: ["Python", "Pandas", "Scikit-learn", "Streamlit"],
+                    githubLink: "https://github.com/MouadBAKHCHANE/Churn-Prediction",
+                    demoLink: "https://mouadbakhchane-data-portfolio-dashboard-t8mqrg.streamlit.app/",
                 },
                 {
                     title: "Dynamic Pricing",
@@ -320,6 +323,9 @@ export const content = {
                     title: "Prédiction de Churn",
                     category: "Machine Learning",
                     description: "Identifier les clients susceptibles de partir et les retenir proactivement. Modèle de classification binaire pour prédire le risque de départ.",
+                    stack: ["Python", "Pandas", "Scikit-learn", "Streamlit"],
+                    githubLink: "https://github.com/MouadBAKHCHANE/Churn-Prediction",
+                    demoLink: "https://mouadbakhchane-data-portfolio-dashboard-t8mqrg.streamlit.app/",
                 },
                 {
                     title: "Pricing Dynamique",
