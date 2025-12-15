@@ -56,5 +56,5 @@ Ready to upgrade your data?
 
 - **Email**: [Contact Me](mailto:your-email@example.com)
 - **LinkedIn**: [Mouad Bakhchane](https://www.linkedin.com/in/mouadbakhchane/)
-- **Portfolio Website**: [My website](https:mouadbakhchane.com)
+- **Portfolio Website**: [My website](https://www.mouadbakhchane.com)
 
