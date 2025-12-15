@@ -34,11 +34,25 @@ export default function Projects({ content }: ProjectsProps) {
                             transition={{ delay: index * 0.1 }}
                             className="bg-slate-900 border border-white/5 rounded-2xl overflow-hidden hover:border-emerald-500/30 transition-all duration-300 group hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-900/20 flex flex-col"
                         >
-                            <div className="h-48 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 relative p-6 flex flex-col justify-end">
-                                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
-                                <div className="relative z-10 p-3 bg-slate-950/30 backdrop-blur-md rounded-xl border border-white/10 w-fit">
-                                    <FolderGit2 className="text-emerald-400" size={24} />
-                                </div>
+                            <div className="h-48 relative overflow-hidden group-hover:scale-[1.02] transition-transform duration-500">
+                                {project.image ? (
+                                    <>
+                                        {/* Overlay gradient for text readability if needed, though design keeps text below */}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60 z-10" />
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </>
+                                ) : (
+                                    <div className="h-full w-full bg-gradient-to-br from-emerald-500/20 to-teal-500/20 relative p-6 flex flex-col justify-end">
+                                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
+                                        <div className="relative z-10 p-3 bg-slate-950/30 backdrop-blur-md rounded-xl border border-white/10 w-fit">
+                                            <FolderGit2 className="text-emerald-400" size={24} />
+                                        </div>
+                                    </div>
+                                )}
                             </div>
 
                             <div className="p-8 flex-1 flex flex-col">
