@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mouad Bakhchane
+## Data & BI Consultant | Microsoft Certified
 
-## Getting Started
+> *"Companies call me when their BI has become unmanageable: inconsistent figures, fragile pipelines, unreadable dashboards, uncontrolled KPIs."*
 
-First, run the development server:
+I help businesses structure, analyze, and visualize their data to make better decisions. As a former financial market expert turned Data Consultant, I bridge the gap between business needs (ROI, P&L, KPIs) and technical reality (SQL, Python, DAX).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 How I Help
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. BI Architecture & Modeling
+**Robust star schemas, clear KPIs, reliable and readable BI.**
+- Power BI Dashboards
+- Advanced DAX & Optimization
+- Security (RLS) & Governance
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. Modern Data Stack
+**Robust architecture for reliable and scalable data.**
+- Snowflake & Microsoft Fabric
+- High-Performance SQL Pipelines
+- DWH Modeling (Data Warehousing)
 
-## Learn More
+### 3. Analytics Engineering
+**The technical bridge between data and business.**
+- Python Automation & Scripts
+- CI/CD & Azure DevOps
+- dbt Transformation
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔄 How We Work Together
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+I follow a structured three-step process to get your BI back on track:
 
-## Deploy on Vercel
+1.  **BI Diagnosis**: Analysis of models, KPIs, pipelines, performance, and governance.
+    *   *Deliverable: Current state + Prioritized action plan.*
+2.  **Complete Reconstruction**: Refactoring models, SQL, Snowflake, Power BI, security, and industrialization.
+    *   *Deliverable: Rebuilt BI, documented, and ready to scale.*
+3.  **Adoption & Transfer**: Documentation, training, and support for management & teams.
+    *   *Deliverable: Autonomous teams and sustainable governance.*
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+##  Portfolio Highlights
+
+- **Churn Prediction**: Machine Learning model to identify and retain at-risk customers (Python, Scikit-learn, Streamlit).
+- **Dynamic Pricing**: Optimization models to maximize revenue based on demand.
+- **Demand Forecasting**: Time-series forecasting for inventory management.
+
+---
+
+##  Contact
+
+Ready to upgrade your data?
+
+- **Email**: [Contact Me](mailto:your-email@example.com)
+- **LinkedIn**: [Mouad Bakhchane](https://www.linkedin.com/in/mouadbakhchane/)
+- **Portfolio Website**: [My website](https:mouadbakhchane.com)
+

@@ -51,12 +51,30 @@ export default function Projects({ content }: ProjectsProps) {
                                 </p>
 
                                 <div className="flex flex-wrap gap-2 mb-8">
-                                    {/* Mock tags for now, or add to content dictionary later if precise tags needed per lang */}
+                                    {project.stack?.map((tech: string, i: number) => (
+                                        <span key={i} className="px-3 py-1 rounded-full bg-slate-800 border border-white/10 text-xs font-medium text-slate-300">
+                                            {tech}
+                                        </span>
+                                    ))}
                                 </div>
 
-                                <Link href="#" className="w-full py-3 rounded-xl bg-white/5 border border-white/10 text-white font-semibold flex items-center justify-center gap-2 hover:bg-emerald-500 hover:text-slate-950 hover:border-emerald-500 transition-all">
-                                    {view_project} <ArrowUpRight size={18} />
-                                </Link>
+                                <div className="flex gap-4 mt-auto">
+                                    {project.demoLink ? (
+                                        <Link href={project.demoLink} target="_blank" className="flex-1 py-3 rounded-xl bg-emerald-500 text-slate-900 font-bold flex items-center justify-center gap-2 hover:bg-emerald-400 transition-all shadow-lg shadow-emerald-900/20">
+                                            <ExternalLink size={18} /> Demo
+                                        </Link>
+                                    ) : (
+                                        <Link href="#" className="flex-1 py-3 rounded-xl bg-white/5 border border-white/10 text-white font-semibold flex items-center justify-center gap-2 hover:bg-emerald-500 hover:text-slate-950 hover:border-emerald-500 transition-all">
+                                            {view_project} <ArrowUpRight size={18} />
+                                        </Link>
+                                    )}
+
+                                    {project.githubLink && (
+                                        <Link href={project.githubLink} target="_blank" className="p-3 rounded-xl bg-slate-800 border border-white/10 text-white hover:bg-white hover:text-slate-950 transition-all flex items-center justify-center">
+                                            <Github size={20} />
+                                        </Link>
+                                    )}
+                                </div>
                             </div>
                         </motion.div>
                     ))}
