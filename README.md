@@ -42,7 +42,7 @@ I follow a structured three-step process to get your BI back on track:
 
 ---
 
-## � Portfolio Highlights
+##  Portfolio Highlights
 
 - **Churn Prediction**: Machine Learning model to identify and retain at-risk customers (Python, Scikit-learn, Streamlit).
 - **Dynamic Pricing**: Optimization models to maximize revenue based on demand.
@@ -50,7 +50,7 @@ I follow a structured three-step process to get your BI back on track:
 
 ---
 
-## � Contact
+##  Contact
 
 Ready to upgrade your data?
 
