@@ -17,8 +17,8 @@ export default function Expertise({ content }: ExpertiseProps) {
     const { badge, items, side_title, side_para1, side_para2, side_para3, stats } = content;
 
     return (
-        <section id="id_expertise" className="py-24 bg-slate-950 border-y border-white/5">
-            <div className="container mx-auto px-6">
+        <section id="id_expertise" className="py-24 bg-slate-50 border-y border-slate-200">
+            <div className="container mx-auto px-6 md:px-12 lg:px-24">
                 <div className="grid lg:grid-cols-12 gap-12 lg:gap-24">
 
                     {/* Left Column: Services List */}
@@ -26,7 +26,7 @@ export default function Expertise({ content }: ExpertiseProps) {
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            className="text-blue-500 font-bold tracking-widest uppercase text-sm mb-12"
+                            className="text-blue-600 font-bold tracking-widest uppercase text-sm mb-12"
                         >
                             {badge}
                         </motion.div>
@@ -38,15 +38,15 @@ export default function Expertise({ content }: ExpertiseProps) {
                                     initial={{ opacity: 0, x: -20 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ delay: index * 0.1 }}
-                                    className="bg-slate-900 border border-white/5 rounded-2xl p-6 hover:border-blue-500/30 transition-all duration-300 group"
+                                    className="bg-white border border-slate-100 rounded-2xl p-6 hover:border-blue-200 hover:shadow-lg transition-all duration-300 group"
                                 >
                                     <div className="flex gap-6 items-start">
                                         <div className={`w-12 h-12 rounded-full ${icons[index % icons.length].bg} flex items-center justify-center shrink-0 ${icons[index % icons.length].text}`}>
                                             {icons[index % icons.length].icon}
                                         </div>
                                         <div>
-                                            <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                                            <p className="text-slate-400 text-sm leading-relaxed">
+                                            <h3 className="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">{item.title}</h3>
+                                            <p className="text-slate-600 text-sm leading-relaxed">
                                                 {item.description}
                                             </p>
                                         </div>
@@ -61,7 +61,7 @@ export default function Expertise({ content }: ExpertiseProps) {
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            className="text-4xl md:text-5xl font-bold text-white mb-8"
+                            className="text-4xl md:text-5xl font-bold text-slate-900 mb-8"
                         >
                             {side_title}
                         </motion.h2>
@@ -70,7 +70,7 @@ export default function Expertise({ content }: ExpertiseProps) {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="space-y-6 text-slate-300 text-lg leading-relaxed mb-12"
+                            className="space-y-6 text-slate-600 text-lg leading-relaxed mb-12"
                         >
                             <p>{side_para1}</p>
                             <p>{side_para2}</p>
@@ -84,12 +84,12 @@ export default function Expertise({ content }: ExpertiseProps) {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.3 + index * 0.1 }}
-                                    className="bg-slate-900/50 border border-white/5 p-8 rounded-2xl"
+                                    className="bg-white border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-all"
                                 >
-                                    <div className="text-4xl lg:text-5xl font-bold text-blue-500 mb-2">
+                                    <div className="text-4xl lg:text-5xl font-bold text-blue-600 mb-2">
                                         {stat.value}
                                     </div>
-                                    <div className="text-slate-400 text-sm font-medium">
+                                    <div className="text-slate-500 text-sm font-medium">
                                         {stat.label}
                                     </div>
                                 </motion.div>

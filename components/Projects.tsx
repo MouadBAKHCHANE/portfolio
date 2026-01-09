@@ -12,14 +12,14 @@ export default function Projects({ content }: ProjectsProps) {
     const { badge, title_start, title_highlight, subtitle, view_project, items } = content;
 
     return (
-        <section id="id_projects" className="py-24 bg-slate-950 text-white">
-            <div className="container mx-auto px-6">
+        <section id="id_projects" className="py-24 bg-slate-50 text-slate-900 border-y border-slate-200">
+            <div className="container mx-auto px-6 md:px-12 lg:px-24">
                 <div className="mb-16 flex flex-col items-center text-center">
-                    <div className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-widest mb-4">
+                    <div className="px-3 py-1 rounded-full bg-blue-100 border border-blue-200 text-blue-600 text-xs font-bold uppercase tracking-widest mb-4">
                         {badge}
                     </div>
-                    <h3 className="text-3xl md:text-5xl font-bold mb-6">{title_start} <span className="text-emerald-400">{title_highlight}</span></h3>
-                    <p className="text-slate-400 max-w-2xl">
+                    <h3 className="text-3xl md:text-5xl font-bold mb-6">{title_start} <span className="text-blue-600">{title_highlight}</span></h3>
+                    <p className="text-slate-600 max-w-2xl">
                         {subtitle}
                     </p>
                 </div>
@@ -32,13 +32,11 @@ export default function Projects({ content }: ProjectsProps) {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-slate-900 border border-white/5 rounded-2xl overflow-hidden hover:border-emerald-500/30 transition-all duration-300 group hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-900/20 flex flex-col"
+                            className="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:border-blue-300 transition-all duration-300 group hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-900/5 flex flex-col"
                         >
-                            <div className="h-48 relative overflow-hidden group-hover:scale-[1.02] transition-transform duration-500">
+                            <div className="h-64 relative overflow-hidden group-hover:scale-[1.02] transition-transform duration-500">
                                 {project.image ? (
                                     <>
-                                        {/* Overlay gradient for text readability if needed, though design keeps text below */}
-                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60 z-10" />
                                         <img
                                             src={project.image}
                                             alt={project.title}
@@ -46,27 +44,27 @@ export default function Projects({ content }: ProjectsProps) {
                                         />
                                     </>
                                 ) : (
-                                    <div className="h-full w-full bg-gradient-to-br from-emerald-500/20 to-teal-500/20 relative p-6 flex flex-col justify-end">
-                                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
-                                        <div className="relative z-10 p-3 bg-slate-950/30 backdrop-blur-md rounded-xl border border-white/10 w-fit">
-                                            <FolderGit2 className="text-emerald-400" size={24} />
+                                    <div className="h-full w-full bg-gradient-to-br from-blue-50 to-indigo-50 relative p-6 flex flex-col justify-end">
+                                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 mix-blend-multiply"></div>
+                                        <div className="relative z-10 p-3 bg-white/60 backdrop-blur-md rounded-xl border border-white/40 w-fit">
+                                            <FolderGit2 className="text-blue-500" size={24} />
                                         </div>
                                     </div>
                                 )}
                             </div>
 
                             <div className="p-8 flex-1 flex flex-col">
-                                <div className="text-emerald-400 text-sm font-medium mb-2 tracking-wide">
+                                <div className="text-blue-600 text-sm font-medium mb-2 tracking-wide">
                                     {project.category}
                                 </div>
-                                <h4 className="text-xl font-bold mb-4 text-white group-hover:text-emerald-300 transition-colors">{project.title}</h4>
-                                <p className="text-slate-400 text-sm leading-relaxed mb-6 flex-1">
+                                <h4 className="text-xl font-bold mb-4 text-slate-900 group-hover:text-blue-600 transition-colors">{project.title}</h4>
+                                <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-1">
                                     {project.description}
                                 </p>
 
                                 <div className="flex flex-wrap gap-2 mb-8">
                                     {project.stack?.map((tech: string, i: number) => (
-                                        <span key={i} className="px-3 py-1 rounded-full bg-slate-800 border border-white/10 text-xs font-medium text-slate-300">
+                                        <span key={i} className="px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-medium text-slate-600">
                                             {tech}
                                         </span>
                                     ))}
@@ -74,17 +72,17 @@ export default function Projects({ content }: ProjectsProps) {
 
                                 <div className="flex gap-4 mt-auto">
                                     {project.demoLink ? (
-                                        <Link href={project.demoLink} target="_blank" className="flex-1 py-3 rounded-xl bg-emerald-500 text-slate-900 font-bold flex items-center justify-center gap-2 hover:bg-emerald-400 transition-all shadow-lg shadow-emerald-900/20">
+                                        <Link href={project.demoLink} target="_blank" className="flex-1 py-3 rounded-xl bg-blue-600 text-white font-bold flex items-center justify-center gap-2 hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/20">
                                             <ExternalLink size={18} /> Demo
                                         </Link>
                                     ) : (
-                                        <Link href="#" className="flex-1 py-3 rounded-xl bg-white/5 border border-white/10 text-white font-semibold flex items-center justify-center gap-2 hover:bg-emerald-500 hover:text-slate-950 hover:border-emerald-500 transition-all">
+                                        <Link href="#" className="flex-1 py-3 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 font-semibold flex items-center justify-center gap-2 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 transition-all">
                                             {view_project} <ArrowUpRight size={18} />
                                         </Link>
                                     )}
 
                                     {project.githubLink && (
-                                        <Link href={project.githubLink} target="_blank" className="p-3 rounded-xl bg-slate-800 border border-white/10 text-white hover:bg-white hover:text-slate-950 transition-all flex items-center justify-center">
+                                        <Link href={project.githubLink} target="_blank" className="p-3 rounded-xl bg-slate-100 border border-slate-200 text-slate-600 hover:bg-slate-800 hover:text-white transition-all flex items-center justify-center">
                                             <Github size={20} />
                                         </Link>
                                     )}
