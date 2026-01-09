@@ -17,7 +17,7 @@ I help businesses structure, analyze, and visualize their data to make better de
 
 ### 2. Modern Data Stack
 **Robust architecture for reliable and scalable data.**
-- Snowflake & Microsoft Fabric
+- Microsoft Fabric & Snowflake  
 - High-Performance SQL Pipelines
 - DWH Modeling (Data Warehousing)
 
