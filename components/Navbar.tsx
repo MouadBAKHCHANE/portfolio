@@ -35,13 +35,13 @@ export default function Navbar({ content, lang }: NavbarProps) {
         <nav className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
             <div
                 className={cn(
-                    "w-full max-w-6xl rounded-full transition-all duration-300 border border-white/5 bg-slate-900/80 backdrop-blur-xl shadow-2xl shadow-emerald-900/20 px-6 py-3 flex justify-between items-center",
-                    scrolled ? "bg-slate-900/90" : "bg-slate-900/80"
+                    "w-full max-w-6xl rounded-full transition-all duration-300 border border-slate-200/50 bg-white/70 backdrop-blur-md shadow-lg shadow-slate-200/50 px-6 py-3 flex justify-between items-center",
+                    scrolled ? "bg-white/90 shadow-xl" : "bg-white/70"
                 )}
             >
                 {/* Left: Identity */}
                 <Link href={lang === "fr" ? "/fr" : "/"} className="flex items-center gap-3 decoration-transparent group">
-                    <div className="w-10 h-10 rounded-full border border-white/10 overflow-hidden relative">
+                    <div className="w-10 h-10 rounded-full border border-slate-200 overflow-hidden relative shadow-sm">
                         <Image
                             src="/avatar.png"
                             alt="Mouad Bakhchane"
@@ -50,8 +50,8 @@ export default function Navbar({ content, lang }: NavbarProps) {
                         />
                     </div>
                     <div className="flex flex-col">
-                        <span className="font-bold text-white text-sm leading-none group-hover:text-emerald-400 transition-colors">Mouad Bakhchane</span>
-                        <span className="text-[10px] text-emerald-400 uppercase tracking-wider font-medium mt-1">{role}</span>
+                        <span className="font-bold text-slate-800 text-sm leading-none group-hover:text-blue-600 transition-colors">Mouad Bakhchane</span>
+                        <span className="text-[10px] text-blue-600 uppercase tracking-wider font-medium mt-1">{role}</span>
                     </div>
                 </Link>
 
@@ -61,28 +61,31 @@ export default function Navbar({ content, lang }: NavbarProps) {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-slate-300 hover:text-white text-sm font-medium transition-colors relative group"
+                            className="text-slate-600 hover:text-blue-600 text-sm font-medium transition-colors relative group"
                         >
                             {link.name}
-                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-500 transition-all group-hover:w-full"></span>
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
                         </Link>
                     ))}
                 </div>
 
                 {/* Right: Actions */}
                 <div className="hidden md:flex items-center gap-4">
-                    <button onClick={toggleLang} className="text-slate-400 hover:text-white transition-colors flex items-center gap-1 font-medium text-xs uppercase border border-white/10 rounded-full px-2 py-1">
+                    <button onClick={toggleLang} className="text-slate-500 hover:text-slate-900 transition-colors flex items-center gap-1 font-medium text-xs uppercase border border-slate-200 rounded-full px-2 py-1 hover:border-slate-300">
                         <Globe size={14} /> {lang === "en" ? "FR" : "EN"}
                     </button>
-                    <Link href="https://linkedin.com" className="text-white hover:text-emerald-400 transition-colors">
+                    <Link href="https://linkedin.com" className="text-slate-400 hover:text-[#0077b5] transition-colors">
                         <Linkedin size={20} />
                     </Link>
                     <Link
                         href="#id_contact"
-                        className="pl-1 pr-5 py-1 bg-emerald-500 hover:bg-emerald-400 text-slate-900 rounded-full font-bold transition-all flex items-center gap-3 hover:scale-105"
+                        className="pl-1 pr-5 py-1 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-bold transition-all flex items-center gap-3 hover:scale-105 shadow-md shadow-blue-500/20"
                     >
-                        <div className="w-8 h-8 rounded-full bg-black/10 flex items-center justify-center">
-                            <User size={18} className="text-slate-900" />
+                        <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center relative">
+                            <span className="relative flex h-3 w-3">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-200 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+                            </span>
                         </div>
                         <span className="text-sm">{cta}</span>
                     </Link>
@@ -90,7 +93,7 @@ export default function Navbar({ content, lang }: NavbarProps) {
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden text-white p-2"
+                    className="md:hidden text-slate-700 p-2"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -104,10 +107,10 @@ export default function Navbar({ content, lang }: NavbarProps) {
                         initial={{ opacity: 0, y: -20, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: -20, scale: 0.95 }}
-                        className="absolute top-20 left-4 right-4 bg-slate-900 border border-white/10 rounded-2xl p-4 shadow-xl md:hidden"
+                        className="absolute top-20 left-4 right-4 bg-white border border-slate-200 rounded-2xl p-4 shadow-xl md:hidden"
                     >
                         <div className="flex flex-col gap-2">
-                            <button onClick={toggleLang} className="self-end text-slate-400 hover:text-white transition-colors flex items-center gap-2 font-medium text-sm border border-white/10 rounded-full px-3 py-1 mb-2">
+                            <button onClick={toggleLang} className="self-end text-slate-500 hover:text-slate-900 transition-colors flex items-center gap-2 font-medium text-sm border border-slate-200 rounded-full px-3 py-1 mb-2">
                                 <Globe size={16} /> Switch to {lang === "en" ? "French" : "English"}
                             </button>
                             {links.map((link: any) => (
@@ -115,16 +118,16 @@ export default function Navbar({ content, lang }: NavbarProps) {
                                     key={link.name}
                                     href={link.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="p-3 rounded-lg hover:bg-white/5 text-slate-300 hover:text-white font-medium transition-colors"
+                                    className="p-3 rounded-lg hover:bg-slate-50 text-slate-600 hover:text-blue-600 font-medium transition-colors"
                                 >
                                     {link.name}
                                 </Link>
                             ))}
-                            <div className="h-px bg-white/5 my-2"></div>
+                            <div className="h-px bg-slate-100 my-2"></div>
                             <Link
                                 href="#id_contact"
                                 onClick={() => setIsOpen(false)}
-                                className="p-3 rounded-lg bg-emerald-500 text-slate-900 font-bold text-center"
+                                className="p-3 rounded-lg bg-blue-600 text-white font-bold text-center"
                             >
                                 {cta}
                             </Link>

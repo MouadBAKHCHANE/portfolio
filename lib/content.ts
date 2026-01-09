@@ -17,7 +17,12 @@ export const content = {
             name: "Mouad Bakhchane",
             intro_text: "Companies call me when their BI has become unmanageable: inconsistent figures, fragile pipelines, unreadable dashboards, uncontrolled KPIs.",
             cta_primary: "View My Work",
-            cta_secondary: "Contact Me"
+            cta_secondary: "Contact Me",
+            stats: [
+                { value: "50", label: "Reports Industrialized" },
+                { value: "25", label: "ML Models Built" },
+                { value: "4", label: "Sectors: Media, Auto, Aero" }
+            ]
         },
         whenToCall: {
             badge: "Current Situation",
@@ -184,6 +189,7 @@ export const content = {
             title_start: "Ready to Upgrade Your",
             title_highlight: "Data?",
             subtitle: "Available for freelance missions. Let's discuss your project.",
+            phone: "+212 611 714 711",
             email_button: "Send me an email",
             logo_text: "Data",
             logo_sub: "with Mouad"
@@ -207,7 +213,12 @@ export const content = {
             name: "Mouad Bakhchane",
             intro_text: "Les entreprises m'appellent quand leur BI est devenue ingérable : chiffres incohérents, pipelines fragiles, dashboards illisibles, KPI non maîtrisés.",
             cta_primary: "Voir mon travail",
-            cta_secondary: "Me Contacter"
+            cta_secondary: "Me Contacter",
+            stats: [
+                { value: "50", label: "Rapports Industrialisés" },
+                { value: "25", label: "Modèles ML Déployés" },
+                { value: "4", label: "Secteurs: Media, Auto, Aéro" }
+            ]
         },
         whenToCall: {
             badge: "Situation Actuelle",
@@ -374,6 +385,7 @@ export const content = {
             title_start: "Prêt à Upgrader Votre",
             title_highlight: "Data ?",
             subtitle: "Disponible pour missions freelance. Discutons de votre projet.",
+            phone: "+212 611 714 711",
             email_button: "M'envoyer un email",
             logo_text: "Data",
             logo_sub: "avec Mouad"

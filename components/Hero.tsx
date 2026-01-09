@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { ArrowRight, User, CheckCircle2, Database } from "lucide-react";
 import { motion } from "framer-motion";
-import Image from "next/image"; // Assuming we might use Next.js Image later, importing for standard practice
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
 // Tech Logos (using text/icons for now as placeholders for actual SVGs)
 // Tech Logos
@@ -20,64 +21,161 @@ interface HeroProps {
 }
 
 export default function Hero({ content }: HeroProps) {
-    const { greeting, name_prefix, name, intro_text, cta_primary, cta_secondary } = content;
+    const { greeting, name_prefix, name, intro_text, cta_primary, cta_secondary, stats, logos } = content;
 
     return (
-        <section id="id_home" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-950 min-h-screen flex flex-col justify-center">
+        <section id="id_home" className="relative pt-24 pb-10 lg:pt-28 lg:pb-16 overflow-hidden bg-background flex flex-col">
             {/* Background Gradients */}
-            <div className="absolute top-[-20%] right-[-10%] w-[50%] h-[50%] bg-emerald-900/20 rounded-full blur-[120px] pointer-events-none" />
-            <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[60%] bg-teal-900/20 rounded-full blur-[120px] pointer-events-none" />
-            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/noise.png')] opacity-[0.03] mix-blend-overlay pointer-events-none"></div>
+            <div className="absolute top-[-20%] right-[-10%] w-[50%] h-[50%] bg-blue-100/50 rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[60%] bg-indigo-100/50 rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/noise.png')] opacity-[0.4] mix-blend-overlay pointer-events-none"></div>
 
-            <div className="container mx-auto px-6 relative z-10 flex flex-col items-center">
-                <div className="max-w-4xl text-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <h1 className="text-5xl lg:text-7xl font-bold tracking-tight text-white mb-12 leading-tight">
-                            {greeting} {name_prefix} <span className="relative z-10 inline-block text-emerald-400">
-                                {name}
-                                <span className="absolute bottom-2 left-0 w-full h-4 bg-emerald-500/20 -rotate-1 -z-10 rounded-full blur-sm"></span>
-                                <span className="absolute bottom-2 left-0 w-full h-1 bg-emerald-500/50 -rotate-1 -z-10 rounded-full"></span>
-                            </span>
-                        </h1>
-                    </motion.div>
-
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                        className="text-xl md:text-2xl text-slate-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed"
-                    >
-                        {intro_text}
-                    </motion.p>
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.3 }}
-                        className="flex flex-col sm:flex-row gap-6 items-center justify-center"
-                    >
-                        <Link
-                            href="#id_projects"
-                            className="group pl-1 pr-8 py-1.5 bg-emerald-500 text-slate-900 rounded-full font-bold hover:bg-emerald-400 transition-all flex items-center gap-4 text-lg shadow-[0_0_40px_rgba(16,185,129,0.4)] hover:shadow-[0_0_60px_rgba(16,185,129,0.6)] hover:scale-105"
+            <div className="container mx-auto px-8 md:px-24 lg:px-48 relative z-10">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+                    {/* Left Column: Content */}
+                    <div className="max-w-3xl pt-0">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
                         >
-                            <div className="w-12 h-12 rounded-full bg-black/10 flex items-center justify-center group-hover:bg-black/20 transition-colors">
-                                <User size={24} className="text-slate-900" />
+                            <h1 className="text-4xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-8 leading-[1.1]">
+                                <span className="text-slate-700 text-3xl lg:text-5xl mr-3">{greeting} {name_prefix}</span>
+                                <span className="relative z-10 inline-block text-blue-600 block mt-2">
+                                    {name}
+                                    <span className="absolute bottom-2 left-0 w-full h-4 bg-blue-200/50 -rotate-1 -z-10 rounded-full blur-sm"></span>
+                                </span>
+                            </h1>
+                        </motion.div>
+
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            className="text-lg md:text-xl text-slate-600 mb-10 font-light leading-relaxed max-w-xl"
+                        >
+                            {intro_text}
+                        </motion.p>
+
+                        {/* Stats Grid */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.3 }}
+                            className="grid grid-cols-3 gap-4 border-y border-slate-200 py-6 mb-10"
+                        >
+                            {stats?.map((stat: any, index: number) => (
+                                <div key={index} className="text-center lg:text-left">
+                                    <div className="text-3xl lg:text-4xl font-bold text-slate-900 flex items-center justify-center lg:justify-start">
+                                        <Counter value={stat.value} />
+                                        <span className="text-blue-600">+</span>
+                                    </div>
+                                    <p className="text-xs lg:text-sm text-slate-500 uppercase tracking-wider font-semibold mt-1">{stat.label}</p>
+                                </div>
+                            ))}
+                        </motion.div>
+                    </div>
+
+
+
+
+                    {/* Right Column: Image & Buttons */}
+                    <div className="relative hidden lg:flex flex-col h-full min-h-[500px] items-end justify-start pt-0 -mt-16 gap-8">
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.8 }}
+                            className="relative"
+                        >
+                            <div className="relative w-[300px] h-[400px]">
+                                <Image
+                                    src="/avatar.png"
+                                    alt={name}
+                                    fill
+                                    className="object-contain object-bottom drop-shadow-2xl"
+                                    priority
+                                    sizes="(max-width: 768px) 100vw, 300px"
+                                />
+
+                                {/* Microsoft Badge Overlay */}
+                                <div className="absolute bottom-4 -right-4 bg-white p-3 rounded-xl shadow-xl flex items-center gap-3 border border-slate-100 animate-bounce-slow max-w-[200px]">
+                                    <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 shrink-0">
+                                        <CheckCircle2 size={16} strokeWidth={3} />
+                                    </div>
+                                    <div>
+                                        <p className="font-bold text-slate-900 text-[10px] leading-tight">MICROSOFT PL-300</p>
+                                        <p className="text-[9px] text-slate-500 mt-0.5 leading-tight">Power BI Data Analyst Associate</p>
+                                    </div>
+                                </div>
                             </div>
-                            {cta_primary}
-                        </Link>
-                        <Link
-                            href="#id_contact"
-                            className="px-8 py-4 bg-transparent border border-emerald-500/30 text-emerald-400 rounded-full font-medium hover:bg-emerald-500/10 hover:border-emerald-500/60 transition-all flex items-center gap-2 backdrop-blur-sm"
+                        </motion.div>
+
+                        {/* Buttons moved here */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.5 }}
+                            className="flex flex-col sm:flex-row gap-4"
                         >
-                            {cta_secondary}
-                        </Link>
-                    </motion.div>
+                            <Link
+                                href="#id_projects"
+                                className="group px-8 py-4 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-500 transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25 hover:scale-105"
+                            >
+                                {cta_primary}
+                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                            </Link>
+                            <Link
+                                href="#id_contact"
+                                className="px-8 py-4 bg-white border border-slate-200 text-slate-700 rounded-full font-bold hover:bg-slate-50 hover:border-slate-300 hover:text-slate-900 transition-all flex items-center justify-center shadow-sm hover:scale-105"
+                            >
+                                {cta_secondary}
+                            </Link>
+                        </motion.div>
+                    </div>
                 </div>
             </div>
         </section>
     );
+}
+
+function Counter({ value }: { value: string }) {
+    const numericValue = parseInt(value, 10);
+
+    if (isNaN(numericValue)) return <span>{value}</span>;
+
+    return (
+        <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+        >
+            <AnimationNumber value={numericValue} />
+        </motion.span>
+    );
+}
+
+function AnimationNumber({ value }: { value: number }) {
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        let start = 0;
+        const end = value;
+        const duration = 2000;
+        if (end === 0) return;
+
+        const totalFrames = Math.min(end, 60);
+        const incrementTime = duration / totalFrames;
+        const step = Math.ceil(end / totalFrames);
+
+        let timer = setInterval(() => {
+            start += step;
+            if (start > end) start = end;
+            setCount(start);
+            if (start === end) clearInterval(timer);
+        }, incrementTime);
+
+        return () => clearInterval(timer);
+    }, [value]);
+
+    return <>{count}</>;
 }
