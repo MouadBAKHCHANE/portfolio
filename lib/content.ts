@@ -5,7 +5,7 @@ export const content = {
                 { name: "When Calling Me", href: "#id_when_to_call" },
                 { name: "Expertise", href: "#id_expertise" },
                 { name: "About Me", href: "#id_about" },
-                { name: "Case Studies", href: "#id_projects" },
+                { name: "Portfolio", href: "#id_projects" },
                 { name: "Testimonials", href: "#id_testimonials" },
             ],
             cta: "Let's Talk",
@@ -139,6 +139,15 @@ export const content = {
             subtitle: "See how I apply data engineering and machine learning to solve actual business problems.",
             view_project: "View Project",
             items: [
+                {
+                    title: "Flight Price Prediction",
+                    category: "Machine Learning",
+                    description: "Analyze and predict flight prices in the Indian Aviation Market. Built a Gradient Boosting Regressor model to estimate fares based on airline, route, and timing.",
+                    stack: ["Python", "Streamlit", "Pandas", "Scikit-learn", "Plotly"],
+                    githubLink: "https://github.com/MouadBAKHCHANE/Flight-Price-Prediction",
+                    demoLink: "https://mouadbakhchane-flight-price-prediction-app-55qrhn.streamlit.app/",
+                    image: "/projects/flight-price-prediction.png",
+                },
                 {
                     title: "Churn Prediction",
                     category: "Machine Learning",
@@ -320,6 +329,15 @@ export const content = {
             subtitle: "Découvrez comment j'applique l'ingénierie des données et le machine learning pour résoudre de vrais problèmes business.",
             view_project: "Voir le Projet",
             items: [
+                {
+                    title: "Prédiction de Prix de Vols",
+                    category: "Machine Learning",
+                    description: "Analysez et prédisez les prix des vols sur le marché indien. Modèle Gradient Boosting pour estimer les tarifs selon la compagnie, l'itinéraire et le moment.",
+                    stack: ["Python", "Streamlit", "Pandas", "Scikit-learn", "Plotly"],
+                    githubLink: "https://github.com/MouadBAKHCHANE/Flight-Price-Prediction",
+                    demoLink: "https://mouadbakhchane-flight-price-prediction-app-55qrhn.streamlit.app/",
+                    image: "/projects/flight-price-prediction.png",
+                },
                 {
                     title: "Prédiction de Churn",
                     category: "Machine Learning",
