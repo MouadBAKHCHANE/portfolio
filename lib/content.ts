@@ -289,49 +289,49 @@ export const content = {
             ]
         },
         expertise: {
-            badge: "Savoir-Faire",
+            badge: "Expertise",
             title_start: "Mes Domaines",
             title_highlight: "d'Expertise",
             items: [
                 {
-                    title: "Architecture BI & Modélisation décisionnelle",
-                    description: "Modèles robustes, KPI clairs, BI lisible et fiable.",
+                    title: "Data Analytics",
+                    description: "Transformer les données brutes en une source de vérité fiable via des schémas en étoile robustes et pipelines scalables.",
                     points: []
                 },
                 {
-                    title: "Industrialisation & Stabilisation BI",
-                    description: "Pipelines stables, gouvernance simple, BI qui ne casse plus.",
+                    title: "Data Visualization",
+                    description: "Créer des tableaux de bord intuitifs et à fort impact pour des décisions immédiates basées sur les données.",
                     points: []
                 },
                 {
-                    title: "Chaîne analytique complète",
-                    description: "SQL/Python, ingestion, optimisation et refresh ultra-rapide.",
+                    title: "Data Science, ML & AI Automation",
+                    description: "Déployer des modèles prêts pour la production pour prédire les résultats et automatiser les workflows via MLOps.",
                     points: []
                 }
             ],
             side_title: "Comment j'aide",
-            side_para1: "Je reconstruis des systèmes BI devenus complexes, lents ou difficiles à exploiter. De la compréhension métier à la mise en production, j'assure la refonte des modèles, la fiabilisation des pipelines SQL/Power BI et l'optimisation des performances pour des chiffres clairs, rapides et actionnables.",
-            side_para2: "J'interviens dans des environnements data exigeants : tech, média, musique, publicité, industrie.",
-            side_para3: "Mes interventions portent sur la reconstruction BI, l'harmonisation des KPI, la réduction des temps de refresh et la mise en place d'une gouvernance durable.",
+            side_para1: "Je comble le fossé entre les données brutes et l'intelligence opérationnelle. Que ce soit pour réparer des dashboards lents ou déployer des modèles locaux en production, je construis des systèmes scalables.",
+            side_para2: "Expert en reconstruction BI, ML Prédictif et MLOps. Au-delà du code, je mets en place la gouvernance nécessaire pour solidifier votre stack data.",
+            side_para3: "",
             stats: [
-                { value: "30+", label: "Systèmes BI reconstruits ou industrialisés" },
-                { value: "15 min", label: "Temps de refresh obtenu (vs 18 h auparavant)" }
+                { value: "50+", label: "Systèmes Reconstruits ou Industrialisés (BI & ML)" },
+                { value: "15 min", label: "Temps de refresh obtenu (vs 18h avant)" }
             ]
         },
 
         howWeWork: {
             title: "Comment on travaille ensemble",
-            subtitle: "Trois blocs clairs pour remettre votre BI sur pied, du diagnostic à l'adoption par les équipes.",
+            subtitle: "Trois blocs clairs pour remettre votre Data sur pied, du diagnostic à l'adoption par les équipes.",
             steps: [
                 {
-                    title: "Diagnostic BI",
+                    title: "Diagnostic Data",
                     description: "Analyse modèle, KPI, pipelines, performance, gouvernance.",
                     deliverable: "Livrable : état des lieux + plan d'action priorisé."
                 },
                 {
                     title: "Reconstruction complète",
-                    description: "Modèle, SQL, Snowflake, Power BI, sécurité, industrialisation.",
-                    deliverable: "Livrable : BI reconstruite, documentée, prête à scaler."
+                    description: "Modèle, SQL, Cloud, Power BI, sécurité, industrialisation.",
+                    deliverable: "Livrable : Système reconstruit, documenté, prêt à scaler."
                 },
                 {
                     title: "Adoption & transfert",
@@ -343,21 +343,35 @@ export const content = {
         },
         about: {
             badge: "À Propos",
-            title_start: "Le Pont Entre",
-            title_highlight: "Data & Business",
-            bio_p1: "Je suis un Business Data Analyst avec un fort background en Finance. J'aide les entreprises à structurer, analyser et visualiser leurs données pour prendre de meilleures décisions.",
-            bio_p2: "Ancien expert des marchés financiers devenu consultant data, je parle à la fois le langage du business (ROI, P&L, KPI) et celui de la tech (SQL, Python, DAX).",
-            stats: [
-                { value: "5+", label: "Années d'Expérience" },
-                { value: "50+", label: "Projets Livrés" },
-                { value: "100%", label: "Satisfaction Client" }
+            title_start: "Combler le Fossé :",
+            title_highlight: "Data, Science & Business",
+            bio_p1: "Je suis Data Scientist & Analyste avec un background Business, spécialisé dans la transformation de données brutes en intelligence opérationnelle. J'aide les entreprises à concilier complexité technique et ROI business.",
+            bring_table_title: "Ce que j'apporte :",
+            points: [
+                { title: "Double Perspective", text: "Je parle le langage du P&L et des KPI tout en architecturant des solutions en SQL, Python et MLOps." },
+                { title: "Des Notebooks à la Production", text: "Je ne construis pas juste des modèles ; je bâtis des systèmes fiables. Je fais passer l'IA de la recherche à la réalité via des environnements stables." },
+                { title: "Livraison de A à Z", text: "De l'analyse statistique approfondie à l'industrialisation de modèles ML pour une scalabilité long terme." }
             ],
             tech_arsenal: "Arsenal Technique",
+            tech_text: "",
+            education_title: "Formation",
+            education: [
+                {
+                    school: "ENCG Settat",
+                    degree: "Master Comptabilité et Finance",
+                    year: "2009 - 2014"
+                }
+            ],
             certifications: "Certifications",
             certs: [
-                "Microsoft Certified: Power BI Data Analyst Associate",
-                "Fabric Analytics Engineer Associate"
-            ]
+                { name: "Data Science", issuer: "ALX & Explore AI", link: "https://savanna.alxafrica.com/certificates/YscyrXL7mT" },
+                { name: "Foundations in Project Management", issuer: "ALX", link: "https://savanna.alxafrica.com/certificates/2HNzP6YRLZ" },
+                { name: "Power BI Data Analyst Associate", issuer: "Microsoft", link: "" },
+                { name: "Fabric Analytics Engineer Associate", issuer: "Microsoft", link: "" }
+            ],
+            // Keeping for type safety if needed
+            bio_p2: "",
+            stats: []
         },
         testimonials: {
             badge: "Témoignages",
