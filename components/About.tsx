@@ -34,7 +34,8 @@ export default function About({ content }: AboutProps) {
         { name: "FastAPI", src: "https://cdn.worldvectorlogo.com/logos/fastapi.svg" },
         { name: "Streamlit", src: "https://streamlit.io/images/brand/streamlit-mark-color.png" },
         { name: "Colab", src: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Colaboratory_SVG_Logo.svg" },
-        { name: "AWS", src: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" }
+        { name: "AWS", src: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" },
+        { name: "Azure", src: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg" }
     ];
 
     return (
@@ -138,7 +139,7 @@ export default function About({ content }: AboutProps) {
                             <Database size={24} className="text-blue-600" /> {tech_arsenal}
                         </h4>
 
-                        <div className="grid grid-cols-4 md:grid-cols-8 gap-6">
+                        <div className="grid grid-cols-3 md:grid-cols-9 gap-6">
                             {stackIcons.map((tech, i) => (
                                 <div key={tech.name} className="flex flex-col items-center justify-center p-4 rounded-xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md hover:-translate-y-1 transition-all group cursor-default">
                                     <div className="w-12 h-12 relative mb-3 group-hover:scale-110 transition-transform duration-300">
