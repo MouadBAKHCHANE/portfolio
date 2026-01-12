@@ -24,16 +24,16 @@ export default function Hero({ content }: HeroProps) {
     const { greeting, name_prefix, name, intro_text, cta_primary, cta_secondary, stats, logos } = content;
 
     return (
-        <section id="id_home" className="relative pt-24 pb-10 lg:pt-28 lg:pb-16 overflow-hidden bg-background flex flex-col">
+        <section id="id_home" className="relative pt-32 pb-10 lg:pt-40 lg:pb-16 overflow-hidden bg-background flex flex-col">
             {/* Background Gradients */}
             <div className="absolute top-[-20%] right-[-10%] w-[50%] h-[50%] bg-blue-100/50 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[60%] bg-indigo-100/50 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/noise.png')] opacity-[0.4] mix-blend-overlay pointer-events-none"></div>
 
-            <div className="container mx-auto px-8 md:px-24 lg:px-48 relative z-10">
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div className="container mx-auto px-6 md:px-12 lg:px-24 xl:px-48 relative z-10">
+                <div className="grid lg:grid-cols-2 gap-0 lg:gap-16 items-start">
                     {/* Left Column: Content */}
-                    <div className="max-w-3xl pt-0">
+                    <div className="max-w-3xl pt-0 text-center lg:text-left mx-auto lg:mx-0">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ export default function Hero({ content }: HeroProps) {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.2 }}
-                            className="text-lg md:text-xl text-slate-600 mb-10 font-light leading-relaxed max-w-xl"
+                            className="text-lg md:text-xl text-slate-600 mb-6 font-light leading-relaxed max-w-xl mx-auto lg:mx-0"
                         >
                             {intro_text}
                         </motion.p>
@@ -62,7 +62,7 @@ export default function Hero({ content }: HeroProps) {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.3 }}
-                            className="grid grid-cols-3 gap-4 border-y border-slate-200 py-6 mb-10"
+                            className="grid grid-cols-3 gap-4 border-y border-slate-200 py-2 mb-0 text-center lg:text-left mx-auto lg:mx-0 max-w-xl lg:max-w-none"
                         >
                             {stats?.map((stat: any, index: number) => (
                                 <div key={index} className="text-center lg:text-left">
@@ -70,7 +70,7 @@ export default function Hero({ content }: HeroProps) {
                                         <Counter value={stat.value} />
                                         <span className="text-blue-600">+</span>
                                     </div>
-                                    <p className="text-xs lg:text-sm text-slate-500 uppercase tracking-wider font-semibold mt-1">{stat.label}</p>
+                                    <p className="text-[10px] lg:text-xs text-slate-500 uppercase tracking-wider font-semibold mt-1">{stat.label}</p>
                                 </div>
                             ))}
                         </motion.div>
@@ -80,14 +80,14 @@ export default function Hero({ content }: HeroProps) {
 
 
                     {/* Right Column: Image & Buttons */}
-                    <div className="relative hidden lg:flex flex-col h-full min-h-[500px] items-end justify-start pt-0 -mt-16 gap-8">
+                    <div className="relative flex flex-col lg:h-full min-h-0 md:min-h-[400px] lg:min-h-[500px] items-center lg:items-end justify-start pt-0 lg:pt-0 -mt-4 lg:-mt-20 gap-8">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8 }}
                             className="relative"
                         >
-                            <div className="relative w-[300px] h-[400px]">
+                            <div className="relative w-[260px] h-[350px]">
                                 <Image
                                     src="/avatar.png"
                                     alt={name}

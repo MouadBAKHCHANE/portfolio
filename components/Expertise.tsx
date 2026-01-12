@@ -1,16 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BarChart3, Database, Code2 } from "lucide-react";
+import { AreaChart, PieChart, BrainCircuit } from "lucide-react";
 
 interface ExpertiseProps {
     content: any;
 }
 
 const icons = [
-    { icon: <BarChart3 size={24} />, bg: "bg-blue-500/10", text: "text-blue-500" },
-    { icon: <Database size={24} />, bg: "bg-orange-500/10", text: "text-orange-500" },
-    { icon: <Code2 size={24} />, bg: "bg-rose-500/10", text: "text-rose-500" }
+    { icon: <AreaChart size={24} />, bg: "bg-blue-500/10", text: "text-blue-500" },      // Analytics
+    { icon: <PieChart size={24} />, bg: "bg-orange-500/10", text: "text-orange-500" },   // Viz
+    { icon: <BrainCircuit size={24} />, bg: "bg-rose-500/10", text: "text-rose-500" }    // AI
 ];
 
 export default function Expertise({ content }: ExpertiseProps) {
@@ -22,7 +22,7 @@ export default function Expertise({ content }: ExpertiseProps) {
                 <div className="grid lg:grid-cols-12 gap-12 lg:gap-24">
 
                     {/* Left Column: Services List */}
-                    <div className="lg:col-span-5 flex flex-col justify-center">
+                    <div className="lg:col-span-7 flex flex-col justify-center">
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -38,15 +38,15 @@ export default function Expertise({ content }: ExpertiseProps) {
                                     initial={{ opacity: 0, x: -20 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ delay: index * 0.1 }}
-                                    className="bg-white border border-slate-100 rounded-2xl p-6 hover:border-blue-200 hover:shadow-lg transition-all duration-300 group"
+                                    className="bg-white border border-slate-100 rounded-2xl p-8 hover:border-blue-200 hover:shadow-lg transition-all duration-300 group"
                                 >
                                     <div className="flex gap-6 items-start">
-                                        <div className={`w-12 h-12 rounded-full ${icons[index % icons.length].bg} flex items-center justify-center shrink-0 ${icons[index % icons.length].text}`}>
+                                        <div className={`w-14 h-14 rounded-full ${icons[index % icons.length].bg} flex items-center justify-center shrink-0 ${icons[index % icons.length].text}`}>
                                             {icons[index % icons.length].icon}
                                         </div>
                                         <div>
-                                            <h3 className="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">{item.title}</h3>
-                                            <p className="text-slate-600 text-sm leading-relaxed">
+                                            <h3 className="text-2xl font-bold text-slate-800 mb-3 group-hover:text-blue-600 transition-colors">{item.title}</h3>
+                                            <p className="text-slate-600 text-base leading-relaxed">
                                                 {item.description}
                                             </p>
                                         </div>
@@ -57,7 +57,7 @@ export default function Expertise({ content }: ExpertiseProps) {
                     </div>
 
                     {/* Right Column: Text & Stats */}
-                    <div className="lg:col-span-7 flex flex-col justify-center">
+                    <div className="lg:col-span-5 flex flex-col justify-center">
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}

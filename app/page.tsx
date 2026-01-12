@@ -8,6 +8,7 @@ import WhenToCall from "@/components/WhenToCall";
 import Expertise from "@/components/Expertise";
 import { content } from "@/lib/content";
 
+import MLOps from "@/components/MLOps";
 import HowWeWork from "@/components/HowWeWork";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <Hero content={t.hero} />
       <WhenToCall content={t.whenToCall} />
       <Expertise content={t.expertise} />
+      <MLOps content={t.mlops} />
       <HowWeWork content={t.howWeWork} />
       <About content={t.about} />
       <Projects content={t.projects} />

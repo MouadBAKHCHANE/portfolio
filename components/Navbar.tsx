@@ -32,7 +32,7 @@ export default function Navbar({ content, lang }: NavbarProps) {
     };
 
     return (
-        <nav className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
+        <nav className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 md:px-6">
             <div
                 className={cn(
                     "w-full max-w-6xl rounded-full transition-all duration-300 border border-slate-200/50 bg-white/70 backdrop-blur-md shadow-lg shadow-slate-200/50 px-6 py-3 flex justify-between items-center",
@@ -56,7 +56,7 @@ export default function Navbar({ content, lang }: NavbarProps) {
                 </Link>
 
                 {/* Center: Nav Links */}
-                <div className="hidden md:flex items-center gap-8">
+                <div className="hidden lg:flex items-center gap-8">
                     {links.map((link: any) => (
                         <Link
                             key={link.name}
@@ -70,7 +70,7 @@ export default function Navbar({ content, lang }: NavbarProps) {
                 </div>
 
                 {/* Right: Actions */}
-                <div className="hidden md:flex items-center gap-4">
+                <div className="hidden lg:flex items-center gap-4">
                     <button onClick={toggleLang} className="text-slate-500 hover:text-slate-900 transition-colors flex items-center gap-1 font-medium text-xs uppercase border border-slate-200 rounded-full px-2 py-1 hover:border-slate-300">
                         <Globe size={14} /> {lang === "en" ? "FR" : "EN"}
                     </button>
@@ -93,7 +93,7 @@ export default function Navbar({ content, lang }: NavbarProps) {
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden text-slate-700 p-2"
+                    className="lg:hidden text-slate-700 p-2"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -107,7 +107,7 @@ export default function Navbar({ content, lang }: NavbarProps) {
                         initial={{ opacity: 0, y: -20, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: -20, scale: 0.95 }}
-                        className="absolute top-20 left-4 right-4 bg-white border border-slate-200 rounded-2xl p-4 shadow-xl md:hidden"
+                        className="absolute top-20 left-4 right-4 bg-white border border-slate-200 rounded-2xl p-4 shadow-xl lg:hidden"
                     >
                         <div className="flex flex-col gap-2">
                             <button onClick={toggleLang} className="self-end text-slate-500 hover:text-slate-900 transition-colors flex items-center gap-2 font-medium text-sm border border-slate-200 rounded-full px-3 py-1 mb-2">

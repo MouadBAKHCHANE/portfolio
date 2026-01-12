@@ -15,18 +15,18 @@ export const content = {
             greeting: "Hello,",
             name_prefix: "I am",
             name: "Mouad Bakhchane",
-            intro_text: "Companies call me when their BI has become unmanageable: inconsistent figures, fragile pipelines, unreadable dashboards, uncontrolled KPIs.",
+            intro_text: "Companies call me when their Data, BI, and ML have become unmanageable: inconsistent figures, fragile pipelines, unreadable dashboards, and unreliable models.",
             cta_primary: "View My Work",
             cta_secondary: "Contact Me",
             stats: [
                 { value: "50", label: "Reports Industrialized" },
                 { value: "25", label: "ML Models Built" },
-                { value: "4", label: "Sectors: Media, Auto, Aero" }
+                { value: "4", label: "Sectors: E-commerce, Retail, SaaS, Fashion" }
             ]
         },
         whenToCall: {
             badge: "Current Situation",
-            title_start: "When Your BI Is Off",
+            title_start: "When Your Data, BI, ML & Automation Is Off",
             title_highlight: "Track",
             subtitle: "Feel like your data is slowing you down instead of helping? Here are typical symptoms.",
             cta: "Brief Me",
@@ -34,40 +34,41 @@ export const content = {
             footer_text_highlight: "2-3 boxes",
             footer_text_end: ", we need to talk.",
             cards: [
-                { id: 1, text: "Inconsistent numbers across reports." },
-                { id: 2, text: "Unstable pipelines and slow refreshes." },
-                { id: 3, text: "Unreadable dashboards, uncontrolled KPIs." },
-                { id: 4, text: "Technical debt, lost business logic." },
-                { id: 5, text: "Management no longer trusts the data." }
+                { id: 1, text: "Inconsistent figures across reports." },
+                { id: 2, text: "Fragile pipelines and slow refreshes." },
+                { id: 3, text: "Unreadable dashboards, unreliable models." },
+                { id: 4, text: "Technical debt, unscalable architecture." },
+                { id: 5, text: "Management no longer trusts the data." },
+                { id: 6, text: "Manual processes and spreadsheets everywhere." }
             ]
         },
         expertise: {
-            badge: "Know-How",
+            badge: "Expertise",
             title_start: "My Areas of",
             title_highlight: "Expertise",
             items: [
                 {
-                    title: "BI Architecture & Modeling",
-                    description: "Robust star schemas, clear KPIs, reliable and readable BI.",
+                    title: "Data Analytics",
+                    description: "Transforming raw data into a reliable source of truth using robust star schemas and scalable pipelines.",
                     points: []
                 },
                 {
-                    title: "Industrialization & Stabilization",
-                    description: "Stable pipelines, simple governance, BI that stops breaking.",
+                    title: "Data Visualization",
+                    description: "Building high-impact dashboards with actionable design for instant data-driven decisions.",
                     points: []
                 },
                 {
-                    title: "Complete Analytics Chain",
-                    description: "SQL/Python, ingestion, optimization, and ultra-fast refresh.",
+                    title: "Data Science, ML & AI Automation",
+                    description: "Deploying production-ready models to predict outcomes and automate workflows using MLOps.",
                     points: []
                 }
             ],
             side_title: "How I Help",
-            side_para1: "I rebuild BI systems that have become complex, slow, or difficult to manage. From business understanding to production deployment, I ensure model refactoring, pipeline reliability (SQL/Power BI), and performance optimization for clear, fast, and actionable figures.",
-            side_para2: "I work in demanding data environments: tech, media, music, advertising, industry.",
-            side_para3: "My interventions focus on BI reconstruction, KPI harmonization, refresh time reduction, and establishing sustainable governance.",
+            side_para1: "I bridge the gap between raw data and operational intelligence. Whether fixing slow dashboards or deploying local models to production, I build scalable systems you can trust.",
+            side_para2: "Expert in BI reconstruction, Predictive ML, and MLOps. Beyond code, I establish the governance needed to keep your data stack solid as you scale.",
+            side_para3: "",
             stats: [
-                { value: "30+", label: "BI Systems Rebuilt or Industrialized" },
+                { value: "50+", label: "Systems Rebuilt or Industrialized (BI & ML)" },
                 { value: "15 min", label: "Refresh Time Achieved (vs 18h before)" }
             ]
         },
@@ -96,21 +97,35 @@ export const content = {
 
         about: {
             badge: "About Me",
-            title_start: "Bridging the Gap Between",
-            title_highlight: "Data & Business",
-            bio_p1: "I am a Business Data Analyst with a strong background in Finance. I help companies structure, analyze, and visualize their data to make better decisions.",
-            bio_p2: "Former financial market expert turned data consultant, I speak both the language of business (ROI, P&L, KPIs) and the language of tech (SQL, Python, DAX).",
-            stats: [
-                { value: "5+", label: "Years Experience" },
-                { value: "50+", label: "Projects Delivered" },
-                { value: "100%", label: "Client Satisfaction" }
+            title_start: "Bridging the Gap:",
+            title_highlight: "Data, Science & Business",
+            bio_p1: "I am a Data Scientist & Analyst with a background in Business, specializing in turning raw data into production-ready intelligence. I help companies bridge the gap between technical complexity and business ROI.",
+            bring_table_title: "What I bring to the table:",
+            points: [
+                { title: "Dual Perspective", text: "I speak the language of P&L and KPIs while architecting solutions in SQL, Python, and MLOps." },
+                { title: "Notebooks to Production", text: "I don’t just build models; I build reliable systems. I move AI from research to reality by deploying stable, automated environments." },
+                { title: "Full-Cycle Delivery", text: "From deep-dive statistical analysis and visualization to industrializing ML models for long-term scalability." }
             ],
-            tech_arsenal: "Technical Arsenal",
+            tech_arsenal: "The Stack",
+            tech_text: "",
+            education_title: "Education",
+            education: [
+                {
+                    school: "ENCG Settat",
+                    degree: "Master Degree Accounting and Finance",
+                    year: "2009 - 2014"
+                }
+            ],
             certifications: "Certifications",
             certs: [
-                "Microsoft Certified: Power BI Data Analyst Associate",
-                "Fabric Analytics Engineer Associate"
-            ]
+                { name: "Data Science", issuer: "ALX & Explore AI", link: "https://savanna.alxafrica.com/certificates/YscyrXL7mT" },
+                { name: "Foundations in Project Management", issuer: "ALX", link: "https://savanna.alxafrica.com/certificates/2HNzP6YRLZ" },
+                { name: "Power BI Data Analyst Associate", issuer: "Microsoft", link: "" },
+                { name: "Fabric Analytics Engineer Associate", issuer: "Microsoft", link: "" }
+            ],
+            // Keeping for type safety if needed, though will rely on points
+            bio_p2: "",
+            stats: []
         },
         testimonials: {
             badge: "Testimonials",
@@ -136,6 +151,41 @@ export const content = {
                     image: "/testimonials/elise.png"
                 }
             ]
+        },
+        mlops: {
+            badge: "Predictive Intelligence & MLOps",
+            title_start: "Bridging the Gap Between",
+            title_highlight: "Data & Production",
+            description: "I don’t just build models; I build reliable systems. Focusing on the MLOps lifecycle to ensure insights don't stay trapped in notebooks.",
+            pillars_title: "The 7 Pillars of my MLOps Blueprint",
+            pillars: [
+                { title: "Clean Project Structure", text: "Modular, readable code." },
+                { title: "Version Control", text: "Git, PRs, Code Review." },
+                { title: "Experiment Tracking", text: "MLflow, Weights & Biases." },
+                { title: "Reproducible Env", text: "Docker, Conda, Poetry." },
+                { title: "Model Deployment", text: "FastAPI, Docker, Kubernetes." },
+                { title: "Model Monitoring", text: "Drift detection, Performance tracking." },
+                { title: "Automated Pipelines", text: "CI/CD, GitHub Actions." }
+            ],
+            use_cases_title: "Predictive Intelligence",
+            use_cases: [
+                {
+                    title: "Demand Forecasting",
+                    description: "Using advanced time-series models (XGBoost, LSTMs) to predict future sales, reducing stockouts and minimizing capital tied up in excess inventory."
+                },
+                {
+                    title: "Customer Churn & LTV",
+                    description: "Identifying at-risk customers before they leave and scoring leads to focus your sales team on the highest-value opportunities."
+                },
+                {
+                    title: "Anomaly Detection",
+                    description: "Implementing real-time monitoring to detect fraud, equipment failure, or operational irregularities before they escalate."
+                }
+            ],
+            policy: {
+                title: "Zero-Waste Policy",
+                text: "If a model doesn't directly improve your bottom line or save your team time, I don't build it."
+            }
         },
         projects: {
             badge: "Portfolio",
@@ -211,18 +261,18 @@ export const content = {
             greeting: "Hello,",
             name_prefix: "Je suis",
             name: "Mouad Bakhchane",
-            intro_text: "Les entreprises m'appellent quand leur BI est devenue ingérable : chiffres incohérents, pipelines fragiles, dashboards illisibles, KPI non maîtrisés.",
+            intro_text: "Les entreprises m'appellent quand leur Data, BI et ML sont devenues ingérables : chiffres incohérents, pipelines fragiles, dashboards illisibles et modèles peu fiables.",
             cta_primary: "Voir mon travail",
             cta_secondary: "Me Contacter",
             stats: [
                 { value: "50", label: "Rapports Industrialisés" },
                 { value: "25", label: "Modèles ML Déployés" },
-                { value: "4", label: "Secteurs: Media, Auto, Aéro" }
+                { value: "4", label: "Secteurs: E-commerce, Retail, SaaS, Mode" }
             ]
         },
         whenToCall: {
             badge: "Situation Actuelle",
-            title_start: "Quand votre BI ne tient plus",
+            title_start: "Quand votre Data, BI, ML & Auto ne tient plus",
             title_highlight: "la route",
             subtitle: "Vous avez l'impression que vos données vous ralentissent au lieu de vous aider ? Voici les symptômes typiques.",
             cta: "Me briefer",
@@ -231,56 +281,57 @@ export const content = {
             footer_text_end: ", on a un sujet.",
             cards: [
                 { id: 1, text: "Chiffres incohérents entre rapports." },
-                { id: 2, text: "Pipelines instables et refresh trop lents." },
-                { id: 3, text: "Dashboards illisibles, KPI non maîtrisés." },
-                { id: 4, text: "Dette technique, règles métiers perdues." },
-                { id: 5, text: "La direction ne sait plus à quoi se fier." }
+                { id: 2, text: "Pipelines fragiles et refresh trop lents." },
+                { id: 3, text: "Dashboards illisibles, modèles peu fiables." },
+                { id: 4, text: "Dette technique, architecture non scalable." },
+                { id: 5, text: "La direction ne sait plus à quoi se fier." },
+                { id: 6, text: "Processus manuels et fichiers Excel partout." }
             ]
         },
         expertise: {
-            badge: "Savoir-Faire",
+            badge: "Expertise",
             title_start: "Mes Domaines",
             title_highlight: "d'Expertise",
             items: [
                 {
-                    title: "Architecture BI & Modélisation décisionnelle",
-                    description: "Modèles robustes, KPI clairs, BI lisible et fiable.",
+                    title: "Data Analytics",
+                    description: "Transformer les données brutes en une source de vérité fiable via des schémas en étoile robustes et pipelines scalables.",
                     points: []
                 },
                 {
-                    title: "Industrialisation & Stabilisation BI",
-                    description: "Pipelines stables, gouvernance simple, BI qui ne casse plus.",
+                    title: "Data Visualization",
+                    description: "Créer des tableaux de bord intuitifs et à fort impact pour des décisions immédiates basées sur les données.",
                     points: []
                 },
                 {
-                    title: "Chaîne analytique complète",
-                    description: "SQL/Python, ingestion, optimisation et refresh ultra-rapide.",
+                    title: "Data Science, ML & AI Automation",
+                    description: "Déployer des modèles prêts pour la production pour prédire les résultats et automatiser les workflows via MLOps.",
                     points: []
                 }
             ],
             side_title: "Comment j'aide",
-            side_para1: "Je reconstruis des systèmes BI devenus complexes, lents ou difficiles à exploiter. De la compréhension métier à la mise en production, j'assure la refonte des modèles, la fiabilisation des pipelines SQL/Power BI et l'optimisation des performances pour des chiffres clairs, rapides et actionnables.",
-            side_para2: "J'interviens dans des environnements data exigeants : tech, média, musique, publicité, industrie.",
-            side_para3: "Mes interventions portent sur la reconstruction BI, l'harmonisation des KPI, la réduction des temps de refresh et la mise en place d'une gouvernance durable.",
+            side_para1: "Je comble le fossé entre les données brutes et l'intelligence opérationnelle. Que ce soit pour réparer des dashboards lents ou déployer des modèles locaux en production, je construis des systèmes scalables.",
+            side_para2: "Expert en reconstruction BI, ML Prédictif et MLOps. Au-delà du code, je mets en place la gouvernance nécessaire pour solidifier votre stack data.",
+            side_para3: "",
             stats: [
-                { value: "30+", label: "Systèmes BI reconstruits ou industrialisés" },
-                { value: "15 min", label: "Temps de refresh obtenu (vs 18 h auparavant)" }
+                { value: "50+", label: "Systèmes Reconstruits ou Industrialisés (BI & ML)" },
+                { value: "15 min", label: "Temps de refresh obtenu (vs 18h avant)" }
             ]
         },
 
         howWeWork: {
             title: "Comment on travaille ensemble",
-            subtitle: "Trois blocs clairs pour remettre votre BI sur pied, du diagnostic à l'adoption par les équipes.",
+            subtitle: "Trois blocs clairs pour remettre votre Data sur pied, du diagnostic à l'adoption par les équipes.",
             steps: [
                 {
-                    title: "Diagnostic BI",
+                    title: "Diagnostic Data",
                     description: "Analyse modèle, KPI, pipelines, performance, gouvernance.",
                     deliverable: "Livrable : état des lieux + plan d'action priorisé."
                 },
                 {
                     title: "Reconstruction complète",
-                    description: "Modèle, SQL, Snowflake, Power BI, sécurité, industrialisation.",
-                    deliverable: "Livrable : BI reconstruite, documentée, prête à scaler."
+                    description: "Modèle, SQL, Cloud, Power BI, sécurité, industrialisation.",
+                    deliverable: "Livrable : Système reconstruit, documenté, prêt à scaler."
                 },
                 {
                     title: "Adoption & transfert",
@@ -292,21 +343,35 @@ export const content = {
         },
         about: {
             badge: "À Propos",
-            title_start: "Le Pont Entre",
-            title_highlight: "Data & Business",
-            bio_p1: "Je suis un Business Data Analyst avec un fort background en Finance. J'aide les entreprises à structurer, analyser et visualiser leurs données pour prendre de meilleures décisions.",
-            bio_p2: "Ancien expert des marchés financiers devenu consultant data, je parle à la fois le langage du business (ROI, P&L, KPI) et celui de la tech (SQL, Python, DAX).",
-            stats: [
-                { value: "5+", label: "Années d'Expérience" },
-                { value: "50+", label: "Projets Livrés" },
-                { value: "100%", label: "Satisfaction Client" }
+            title_start: "Combler le Fossé :",
+            title_highlight: "Data, Science & Business",
+            bio_p1: "Je suis Data Scientist & Analyste avec un background Business, spécialisé dans la transformation de données brutes en intelligence opérationnelle. J'aide les entreprises à concilier complexité technique et ROI business.",
+            bring_table_title: "Ce que j'apporte :",
+            points: [
+                { title: "Double Perspective", text: "Je parle le langage du P&L et des KPI tout en architecturant des solutions en SQL, Python et MLOps." },
+                { title: "Des Notebooks à la Production", text: "Je ne construis pas juste des modèles ; je bâtis des systèmes fiables. Je fais passer l'IA de la recherche à la réalité via des environnements stables." },
+                { title: "Livraison de A à Z", text: "De l'analyse statistique approfondie à l'industrialisation de modèles ML pour une scalabilité long terme." }
             ],
             tech_arsenal: "Arsenal Technique",
+            tech_text: "",
+            education_title: "Formation",
+            education: [
+                {
+                    school: "ENCG Settat",
+                    degree: "Master Comptabilité et Finance",
+                    year: "2009 - 2014"
+                }
+            ],
             certifications: "Certifications",
             certs: [
-                "Microsoft Certified: Power BI Data Analyst Associate",
-                "Fabric Analytics Engineer Associate"
-            ]
+                { name: "Data Science", issuer: "ALX & Explore AI", link: "https://savanna.alxafrica.com/certificates/YscyrXL7mT" },
+                { name: "Foundations in Project Management", issuer: "ALX", link: "https://savanna.alxafrica.com/certificates/2HNzP6YRLZ" },
+                { name: "Power BI Data Analyst Associate", issuer: "Microsoft", link: "" },
+                { name: "Fabric Analytics Engineer Associate", issuer: "Microsoft", link: "" }
+            ],
+            // Keeping for type safety if needed
+            bio_p2: "",
+            stats: []
         },
         testimonials: {
             badge: "Témoignages",
