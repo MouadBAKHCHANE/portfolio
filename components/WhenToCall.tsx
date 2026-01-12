@@ -1,18 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { AlertCircle, ArrowRight, HelpCircle } from "lucide-react";
+import { ArrowRight, FileWarning, GitFork, LayoutDashboard, ServerCrash, ShieldAlert, FileSpreadsheet } from "lucide-react";
 
 interface WhenToCallProps {
     content: any;
 }
 
 const icons = [
-    <AlertCircle className="text-rose-400" size={24} />,
-    <AlertCircle className="text-orange-400" size={24} />,
-    <HelpCircle className="text-yellow-400" size={24} />,
-    <AlertCircle className="text-red-400" size={24} />,
-    <HelpCircle className="text-rose-400" size={24} />
+    <FileWarning key="1" className="text-red-500" size={24} />,      // Inconsistent numbers
+    <GitFork key="2" className="text-orange-500" size={24} />,       // Fragile pipelines
+    <LayoutDashboard key="3" className="text-yellow-500" size={24} />, // Unreadable dashboards
+    <ServerCrash key="4" className="text-red-400" size={24} />,      // Tech debt
+    <ShieldAlert key="5" className="text-rose-500" size={24} />,     // Trust issues
+    <FileSpreadsheet key="6" className="text-emerald-500" size={24} /> // Excel hell
 ];
 
 export default function WhenToCall({ content }: WhenToCallProps) {
@@ -21,7 +22,7 @@ export default function WhenToCall({ content }: WhenToCallProps) {
     return (
         <section id="id_when_to_call" className="py-24 bg-white relative overflow-hidden">
             {/* Background Elements */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-500/5 rounded-full blur-[120px] -mt-40 pointer-events-none"></div>
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-red-500/5 rounded-full blur-[120px] -mt-40 pointer-events-none"></div>
 
             <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
                 <div className="text-center mb-16">
@@ -29,7 +30,7 @@ export default function WhenToCall({ content }: WhenToCallProps) {
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 border border-blue-200 text-blue-600 text-xs font-bold uppercase tracking-widest mb-4"
+                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-100 text-red-600 text-xs font-bold uppercase tracking-widest mb-4"
                     >
                         {badge}
                     </motion.div>
@@ -49,7 +50,7 @@ export default function WhenToCall({ content }: WhenToCallProps) {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-slate-600 text-lg max-w-2xl mx-auto"
+                        className="text-slate-600 text-lg max-w-4xl mx-auto"
                     >
                         {subtitle}
                     </motion.p>
