@@ -77,17 +77,17 @@ export default function Expertise({ content }: ExpertiseProps) {
                             <p>{side_para3}</p>
                         </motion.div>
 
-                        <div className="grid sm:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-3 gap-3">
                             {stats && stats.map((stat: any, index: number) => (
                                 <motion.div
                                     key={index}
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.3 + index * 0.1 }}
-                                    className="bg-white border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-all"
+                                    className="bg-white border border-slate-100 p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-center items-center aspect-square text-center"
                                 >
-                                    <div className="text-4xl lg:text-5xl font-bold text-blue-600 mb-2">
-                                        {stat.value}
+                                    <div className="text-2xl lg:text-3xl font-bold text-slate-900 mb-1">
+                                        {stat.value}<span className="text-blue-600">{!isNaN(Number(stat.value)) && "+"}</span>
                                     </div>
                                     <div className="text-slate-500 text-sm font-medium">
                                         {stat.label}
