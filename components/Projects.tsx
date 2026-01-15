@@ -54,8 +54,13 @@ export default function Projects({ content }: ProjectsProps) {
                             </div>
 
                             <div className="p-8 flex-1 flex flex-col">
-                                <div className="text-blue-600 text-sm font-medium mb-2 tracking-wide">
-                                    {project.category}
+                                <div className="flex items-center gap-2 mb-3">
+                                    <span className="text-blue-600 text-sm font-bold tracking-wide">{project.category}</span>
+                                    {project.sector && (
+                                        <span className="px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 text-[10px] font-bold uppercase tracking-wider border border-blue-100">
+                                            {project.sector}
+                                        </span>
+                                    )}
                                 </div>
                                 <h4 className="text-xl font-bold mb-4 text-slate-900 group-hover:text-blue-600 transition-colors">{project.title}</h4>
                                 <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-1">

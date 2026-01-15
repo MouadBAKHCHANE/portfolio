@@ -197,6 +197,7 @@ export const content = {
             items: [
                 {
                     title: "Water Crisis Analytics",
+                    sector: "Public Sector",
                     category: "Data Analytics & BI",
                     description: "Analyzed a national water crisis using SQL (60k records) and Power BI. Uncovered correlations between water access and crime, creating actionable dashboards.",
                     stack: ["SQL", "Power BI", "DAX", "Data Modeling"],
@@ -210,6 +211,7 @@ export const content = {
                 },
                 {
                     title: "Flight Price Prediction",
+                    sector: "Aviation",
                     category: "Machine Learning",
                     description: "Analyze and predict flight prices in the Indian Aviation Market. Built a Gradient Boosting Regressor model to estimate fares based on airline, route, and timing.",
                     stack: ["Python", "Streamlit", "Pandas", "Scikit-learn", "Plotly"],
@@ -219,6 +221,7 @@ export const content = {
                 },
                 {
                     title: "Churn Prediction",
+                    sector: "Retail",
                     category: "Machine Learning",
                     description: "Identify customers likely to leave and retain them proactively. Built a binary classification model to predict churn risk and enable proactive retention strategies.",
                     stack: ["Python", "Pandas", "Scikit-learn", "Streamlit"],
@@ -228,16 +231,19 @@ export const content = {
                 },
                 {
                     title: "Dynamic Pricing",
+                    sector: "E-commerce",
                     category: "Optimization",
                     description: "Adjust prices based on demand, time, or competitor data. Implemented regression and optimization models to maximize revenue dynamically.",
                 },
                 {
                     title: "Demand Forecasting",
+                    sector: "Retail",
                     category: "Time Series",
                     description: "Predict future product demand to manage inventory. Built forecasting models using ARIMA and LSTM to optimize stock levels and reduce waste.",
                 },
                 {
                     title: "Recommendation System",
+                    sector: "E-commerce",
                     category: "Collaborative Filtering",
                     description: "Suggest products/content to increase engagement or purchases. Implemented collaborative filtering and ML-based recommendations using graph databases.",
                 }
@@ -413,6 +419,7 @@ export const content = {
             items: [
                 {
                     title: "Analyse de la Crise de l'Eau",
+                    sector: "Secteur Public",
                     category: "Data Analytics & BI",
                     description: "Analyse d'une crise nationale de l'eau avec SQL (60k enregistrements) et Power BI. Mise en évidence des liens entre accès à l'eau et criminalité via des dashboards actionnables.",
                     stack: ["SQL", "Power BI", "DAX", "Data Modeling"],
@@ -426,6 +433,7 @@ export const content = {
                 },
                 {
                     title: "Prédiction de Prix de Vols",
+                    sector: "Aviation",
                     category: "Machine Learning",
                     description: "Analysez et prédisez les prix des vols sur le marché indien. Modèle Gradient Boosting pour estimer les tarifs selon la compagnie, l'itinéraire et le moment.",
                     stack: ["Python", "Streamlit", "Pandas", "Scikit-learn", "Plotly"],
@@ -435,6 +443,7 @@ export const content = {
                 },
                 {
                     title: "Prédiction de Churn",
+                    sector: "Retail",
                     category: "Machine Learning",
                     description: "Identifier les clients susceptibles de partir et les retenir proactivement. Modèle de classification binaire pour prédire le risque de départ.",
                     stack: ["Python", "Pandas", "Scikit-learn", "Streamlit"],
@@ -444,16 +453,19 @@ export const content = {
                 },
                 {
                     title: "Pricing Dynamique",
+                    sector: "E-commerce",
                     category: "Optimisation",
                     description: "Ajuster les prix en fonction de la demande, du temps ou des concurrents. Modèles de régression pour maximiser les revenus.",
                 },
                 {
                     title: "Prévision de la Demande",
+                    sector: "Retail",
                     category: "Séries Temporelles",
                     description: "Prédire la demande future pour gérer les stocks. Modèles ARIMA et LSTM pour optimiser les niveaux de stock.",
                 },
                 {
                     title: "Système de Recommandation",
+                    sector: "E-commerce",
                     category: "Filtrage Collaboratif",
                     description: "Suggérer des produits/contenus pour augmenter l'engagement. Filtrage collaboratif et graph databases.",
                 }
