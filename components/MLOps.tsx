@@ -13,8 +13,10 @@ import {
     Users,
     AlertTriangle,
     Layers,
-    Repeat
+    Repeat,
+    ArrowRight
 } from "lucide-react";
+import React from "react";
 
 interface MLOpsProps {
     content: any;
@@ -90,10 +92,12 @@ export default function MLOps({ content }: MLOpsProps) {
                                 transition={{ delay: idx * 0.1 }}
                                 className="bg-slate-800/50 border border-slate-700 p-8 rounded-2xl hover:bg-slate-800 transition-colors"
                             >
-                                <div className="bg-slate-900 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-slate-700 shadow-lg">
-                                    {useCaseIcons[idx]}
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="bg-slate-900 w-16 h-16 rounded-xl flex items-center justify-center border border-slate-700 shadow-lg shrink-0">
+                                        {useCaseIcons[idx]}
+                                    </div>
+                                    <h4 className="text-xl font-bold text-white">{uc.title}</h4>
                                 </div>
-                                <h4 className="text-xl font-bold text-white mb-3">{uc.title}</h4>
                                 <p className="text-slate-400 leading-relaxed text-sm">
                                     {uc.description}
                                 </p>
@@ -105,22 +109,28 @@ export default function MLOps({ content }: MLOpsProps) {
                 {/* MLOps Blueprint Pills */}
                 <div className="mb-20">
                     <h3 className="text-2xl font-bold text-white mb-10 text-center">{pillars_title}</h3>
-                    <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+                    <div className="flex flex-wrap justify-center gap-x-4 gap-y-12 max-w-5xl mx-auto">
                         {pillars.map((pillar: any, idx: number) => (
-                            <motion.div
-                                key={idx}
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: idx * 0.05 }}
-                                className="flex items-center gap-3 bg-slate-900 border border-slate-700 px-5 py-3 rounded-full hover:border-blue-500/50 transition-colors"
-                            >
-                                {pillarIcons[idx]}
-                                <div>
-                                    <p className="text-white font-bold text-sm">{pillar.title}</p>
-                                    <p className="text-slate-500 text-xs hidden sm:block">{pillar.text}</p>
-                                </div>
-                            </motion.div>
+                            <React.Fragment key={idx}>
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: idx * 0.05 }}
+                                    className="flex items-center gap-3 bg-slate-900 border border-slate-700 px-5 py-3 rounded-full hover:border-blue-500/50 transition-colors"
+                                >
+                                    {pillarIcons[idx]}
+                                    <div>
+                                        <p className="text-white font-bold text-sm">{pillar.title}</p>
+                                        <p className="text-slate-500 text-xs hidden sm:block">{pillar.text}</p>
+                                    </div>
+                                </motion.div>
+                                {idx < pillars.length - 1 && (
+                                    <div className="hidden md:flex items-center text-slate-600">
+                                        <ArrowRight size={20} />
+                                    </div>
+                                )}
+                            </React.Fragment>
                         ))}
                     </div>
                 </div>
@@ -130,7 +140,7 @@ export default function MLOps({ content }: MLOpsProps) {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="max-w-3xl mx-auto bg-gradient-to-r from-blue-900/20 to-indigo-900/20 border border-blue-500/30 rounded-2xl p-8 text-center backdrop-blur-sm"
+                    className="max-w-6xl mx-auto bg-gradient-to-r from-blue-900/20 to-indigo-900/20 border border-blue-500/30 rounded-2xl p-8 text-center backdrop-blur-sm"
                 >
                     <h4 className="text-blue-400 font-bold uppercase tracking-widest text-sm mb-3">{policy.title}</h4>
                     <p className="text-white text-lg font-medium italic">"{policy.text}"</p>

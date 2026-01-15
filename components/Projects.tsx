@@ -71,15 +71,23 @@ export default function Projects({ content }: ProjectsProps) {
                                 </div>
 
                                 <div className="flex gap-4 mt-auto">
-                                    {project.demoLink ? (
-                                        <Link href={project.demoLink} target="_blank" className="flex-1 py-3 rounded-xl bg-blue-600 text-white font-bold flex items-center justify-center gap-2 hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/20">
-                                            <ExternalLink size={18} /> Demo
-                                        </Link>
-                                    ) : (
-                                        <Link href="#" className="flex-1 py-3 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 font-semibold flex items-center justify-center gap-2 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 transition-all">
-                                            {view_project} <ArrowUpRight size={18} />
-                                        </Link>
-                                    )}
+                                    <div className="flex-1 flex flex-col gap-2">
+                                        {project.demoLinks ? (
+                                            project.demoLinks.map((link: any, idx: number) => (
+                                                <Link key={idx} href={link.url} target="_blank" className="w-full py-2 rounded-xl bg-blue-600 text-white text-sm font-bold flex items-center justify-center gap-2 hover:bg-blue-500 transition-all shadow-md shadow-blue-500/20">
+                                                    <ExternalLink size={16} /> {link.label}
+                                                </Link>
+                                            ))
+                                        ) : project.demoLink ? (
+                                            <Link href={project.demoLink} target="_blank" className="w-full py-3 rounded-xl bg-blue-600 text-white font-bold flex items-center justify-center gap-2 hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/20">
+                                                <ExternalLink size={18} /> Demo
+                                            </Link>
+                                        ) : (
+                                            <Link href="#" className="w-full py-3 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 font-semibold flex items-center justify-center gap-2 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 transition-all">
+                                                {view_project} <ArrowUpRight size={18} />
+                                            </Link>
+                                        )}
+                                    </div>
 
                                     {project.githubLink && (
                                         <Link href={project.githubLink} target="_blank" className="p-3 rounded-xl bg-slate-100 border border-slate-200 text-slate-600 hover:bg-slate-800 hover:text-white transition-all flex items-center justify-center">

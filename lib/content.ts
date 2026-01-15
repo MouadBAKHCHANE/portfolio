@@ -21,7 +21,7 @@ export const content = {
             stats: [
                 { value: "50", label: "Reports Industrialized" },
                 { value: "25", label: "ML Models Built" },
-                { value: "4", label: "Sectors: E-commerce, Retail, SaaS, Fashion" }
+                { value: "4", label: "Sectors: E-commerce, Retail, SaaS, Finance" }
             ]
         },
         whenToCall: {
@@ -68,8 +68,9 @@ export const content = {
             side_para2: "Expert in BI reconstruction, Predictive ML, and MLOps. Beyond code, I establish the governance needed to keep your data stack solid as you scale.",
             side_para3: "",
             stats: [
-                { value: "50+", label: "Systems Rebuilt or Industrialized (BI & ML)" },
-                { value: "15 min", label: "Refresh Time Achieved (vs 18h before)" }
+                { value: "50", label: "Systems Rebuilt or Industrialized (BI & ML)" },
+                { value: "25", label: "Refresh Time Achieved (vs 18h before)" },
+                { value: "4", label: "Sectors: E-commerce, Retail, SaaS, Finance" }
             ]
         },
         howWeWork: {
@@ -195,6 +196,19 @@ export const content = {
             view_project: "View Project",
             items: [
                 {
+                    title: "Water Crisis Analytics",
+                    category: "Data Analytics & BI",
+                    description: "Analyzed a national water crisis using SQL (60k records) and Power BI. Uncovered correlations between water access and crime, creating actionable dashboards.",
+                    stack: ["SQL", "Power BI", "DAX", "Data Modeling"],
+                    githubLink: "https://github.com/MouadBAKHCHANE/Restoring-the-lifeblood-of-Maji-Ndogo",
+                    demoLinks: [
+                        { label: "Dashboard Part 1", url: "https://app.powerbi.com/view?r=eyJrIjoiNDk5ZDNiNjYtYzcyZS00YWFmLWJiZmQtNDcxYjAwYmJkNDQ1IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" },
+                        { label: "Dashboard Part 2 & 3", url: "https://app.powerbi.com/view?r=eyJrIjoiN2U3Yzc3YWQtMTRkNS00NDY1LWExZjYtYWRiMjkwMGFmZDAyIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" },
+                        { label: "Dashboard Part 4", url: "https://app.powerbi.com/view?r=eyJrIjoiZTY2OTU4MTktNjM0YS00Njg3LTg4ZGItMWQzNGNiZDY0ZDEyIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" }
+                    ],
+                    image: "/projects/water-crisis.png",
+                },
+                {
                     title: "Flight Price Prediction",
                     category: "Machine Learning",
                     description: "Analyze and predict flight prices in the Indian Aviation Market. Built a Gradient Boosting Regressor model to estimate fares based on airline, route, and timing.",
@@ -210,7 +224,7 @@ export const content = {
                     stack: ["Python", "Pandas", "Scikit-learn", "Streamlit"],
                     githubLink: "https://github.com/MouadBAKHCHANE/Churn-Prediction",
                     demoLink: "https://mouadbakhchane-data-portfolio-dashboard-t8mqrg.streamlit.app/",
-                    image: "/projects/churn-prediction.png",
+                    image: "/projects/churn-prediction-v2.png",
                 },
                 {
                     title: "Dynamic Pricing",
@@ -226,11 +240,6 @@ export const content = {
                     title: "Recommendation System",
                     category: "Collaborative Filtering",
                     description: "Suggest products/content to increase engagement or purchases. Implemented collaborative filtering and ML-based recommendations using graph databases.",
-                },
-                {
-                    title: "Marketing Response",
-                    category: "Classification",
-                    description: "Predict customer likelihood to respond to campaigns. Built classification models to optimize targeting and improve marketing ROI.",
                 }
             ]
         },
@@ -264,11 +273,7 @@ export const content = {
             intro_text: "Les entreprises m'appellent quand leur Data, BI et ML sont devenues ingérables : chiffres incohérents, pipelines fragiles, dashboards illisibles et modèles peu fiables.",
             cta_primary: "Voir mon travail",
             cta_secondary: "Me Contacter",
-            stats: [
-                { value: "50", label: "Rapports Industrialisés" },
-                { value: "25", label: "Modèles ML Déployés" },
-                { value: "4", label: "Secteurs: E-commerce, Retail, SaaS, Mode" }
-            ]
+            stats: []
         },
         whenToCall: {
             badge: "Situation Actuelle",
@@ -314,8 +319,9 @@ export const content = {
             side_para2: "Expert en reconstruction BI, ML Prédictif et MLOps. Au-delà du code, je mets en place la gouvernance nécessaire pour solidifier votre stack data.",
             side_para3: "",
             stats: [
-                { value: "50+", label: "Systèmes Reconstruits ou Industrialisés (BI & ML)" },
-                { value: "15 min", label: "Temps de refresh obtenu (vs 18h avant)" }
+                { value: "50", label: "Systèmes Reconstruits ou Industrialisés (BI & ML)" },
+                { value: "25", label: "Modèles ML Déployés" },
+                { value: "4", label: "Secteurs: E-commerce, Retail, SaaS, Finance" }
             ]
         },
 
@@ -406,6 +412,19 @@ export const content = {
             view_project: "Voir le Projet",
             items: [
                 {
+                    title: "Analyse de la Crise de l'Eau",
+                    category: "Data Analytics & BI",
+                    description: "Analyse d'une crise nationale de l'eau avec SQL (60k enregistrements) et Power BI. Mise en évidence des liens entre accès à l'eau et criminalité via des dashboards actionnables.",
+                    stack: ["SQL", "Power BI", "DAX", "Data Modeling"],
+                    githubLink: "https://github.com/MouadBAKHCHANE/Restoring-the-lifeblood-of-Maji-Ndogo",
+                    demoLinks: [
+                        { label: "Dashboard Partie 1", url: "https://app.powerbi.com/view?r=eyJrIjoiNDk5ZDNiNjYtYzcyZS00YWFmLWJiZmQtNDcxYjAwYmJkNDQ1IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" },
+                        { label: "Dashboard Partie 2 & 3", url: "https://app.powerbi.com/view?r=eyJrIjoiN2U3Yzc3YWQtMTRkNS00NDY1LWExZjYtYWRiMjkwMGFmZDAyIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" },
+                        { label: "Dashboard Partie 4", url: "https://app.powerbi.com/view?r=eyJrIjoiZTY2OTU4MTktNjM0YS00Njg3LTg4ZGItMWQzNGNiZDY0ZDEyIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" }
+                    ],
+                    image: "/projects/water-crisis.png",
+                },
+                {
                     title: "Prédiction de Prix de Vols",
                     category: "Machine Learning",
                     description: "Analysez et prédisez les prix des vols sur le marché indien. Modèle Gradient Boosting pour estimer les tarifs selon la compagnie, l'itinéraire et le moment.",
@@ -421,7 +440,7 @@ export const content = {
                     stack: ["Python", "Pandas", "Scikit-learn", "Streamlit"],
                     githubLink: "https://github.com/MouadBAKHCHANE/Churn-Prediction",
                     demoLink: "https://mouadbakhchane-data-portfolio-dashboard-t8mqrg.streamlit.app/",
-                    image: "/projects/churn-prediction.png",
+                    image: "/projects/churn-prediction-v2.png",
                 },
                 {
                     title: "Pricing Dynamique",
@@ -437,11 +456,6 @@ export const content = {
                     title: "Système de Recommandation",
                     category: "Filtrage Collaboratif",
                     description: "Suggérer des produits/contenus pour augmenter l'engagement. Filtrage collaboratif et graph databases.",
-                },
-                {
-                    title: "Réponse Marketing",
-                    category: "Classification",
-                    description: "Prédire la probabilité de réponse aux campagnes. Modèles de classification pour optimiser le ciblage et le ROI.",
                 }
             ]
         },
