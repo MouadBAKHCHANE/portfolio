@@ -246,6 +246,9 @@ export const content = {
                     sector: "E-commerce",
                     category: "Collaborative Filtering",
                     description: "Suggest products/content to increase engagement or purchases. Implemented collaborative filtering and ML-based recommendations using graph databases.",
+                    stack: ["Python", "Machine Learning", "Streamlit"],
+                    demoLink: "https://www.kaggle.com/competitions/alx-movie-recommendation-project-2024/submissions",
+                    image: "/projects/recommendation-system.png",
                 }
             ]
         },
@@ -468,6 +471,9 @@ export const content = {
                     sector: "E-commerce",
                     category: "Filtrage Collaboratif",
                     description: "Suggérer des produits/contenus pour augmenter l'engagement. Filtrage collaboratif et graph databases.",
+                    stack: ["Python", "Machine Learning", "Streamlit"],
+                    demoLink: "https://www.kaggle.com/competitions/alx-movie-recommendation-project-2024/submissions",
+                    image: "/projects/recommendation-system.png",
                 }
             ]
         },
