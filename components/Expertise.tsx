@@ -24,8 +24,8 @@ export default function Expertise({ content }: ExpertiseProps) {
                     {/* Left Column: Services List */}
                     <div className="lg:col-span-7 flex flex-col justify-center">
                         <motion.div
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             className="text-blue-600 font-bold tracking-widest uppercase text-sm mb-12"
                         >
                             {badge}
@@ -35,8 +35,8 @@ export default function Expertise({ content }: ExpertiseProps) {
                             {items.map((item: any, index: number) => (
                                 <motion.div
                                     key={index}
-                                    initial={{ opacity: 0, x: -20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: index * 0.1 }}
                                     className="bg-white border border-slate-100 rounded-2xl p-8 hover:border-blue-200 hover:shadow-lg transition-all duration-300 group"
                                 >
@@ -77,14 +77,14 @@ export default function Expertise({ content }: ExpertiseProps) {
                             <p>{side_para3}</p>
                         </motion.div>
 
-                        <div className="grid grid-cols-3 gap-3">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                             {stats && stats.map((stat: any, index: number) => (
                                 <motion.div
                                     key={index}
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.3 + index * 0.1 }}
-                                    className="bg-white border border-slate-100 p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-center items-center aspect-square text-center"
+                                    className="bg-white border border-slate-100 p-6 md:p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-center items-center md:aspect-square text-center"
                                 >
                                     <div className="text-2xl lg:text-3xl font-bold text-slate-900 mb-1">
                                         {stat.value}<span className="text-blue-600">{!isNaN(Number(stat.value)) && "+"}</span>

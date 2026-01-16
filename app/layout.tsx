@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${outfit.className} ${dancing.variable}`}>{children}</body>
+      <body className={`${outfit.className} ${dancing.variable} overflow-x-hidden`}>{children}</body>
     </html>
   );
 }

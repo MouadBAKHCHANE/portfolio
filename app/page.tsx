@@ -9,7 +9,6 @@ import Expertise from "@/components/Expertise";
 import { content } from "@/lib/content";
 
 import MLOps from "@/components/MLOps";
-import HowWeWork from "@/components/HowWeWork";
 
 export default function Home() {
   const t = content.en;
@@ -21,11 +20,10 @@ export default function Home() {
       <WhenToCall content={t.whenToCall} />
       <Expertise content={t.expertise} />
       <MLOps content={t.mlops} />
-      <HowWeWork content={t.howWeWork} />
       <About content={t.about} />
       <Projects content={t.projects} />
       <Testimonials content={t.testimonials} />
       <Contact content={t.contact} />
-    </main>
+    </main >
   );
 }
