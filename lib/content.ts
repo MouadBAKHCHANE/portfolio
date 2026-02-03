@@ -48,12 +48,12 @@ export const content = {
             title_highlight: "Expertise",
             items: [
                 {
-                    title: "Data Analytics",
+                    title: "Analytics Engineering",
                     description: "Transforming raw data into a reliable source of truth using robust star schemas and scalable pipelines.",
                     points: []
                 },
                 {
-                    title: "Data Visualization",
+                    title: "Data Analytics",
                     description: "Building high-impact dashboards with actionable design for instant data-driven decisions.",
                     points: []
                 },
@@ -135,14 +135,14 @@ export const content = {
             items: [
                 {
                     quote: "Mouad transformed our manual reporting into a war machine. What took us 2 days now takes 2 minutes.",
-                    author: "Sarah Martin",
+                    author: "Ahmed Tyarti",
                     role: "CFO, TechFlow Solutions",
                     image: "/testimonials/sarah.png"
                 },
                 {
                     quote: "The audit of our data pipelines revealed critical flaws. Thanks to his intervention, our KPIs are finally 100% reliable.",
-                    author: "Thomas Dubois",
-                    role: "Head of Data, RetailConnect",
+                    author: "Jawad Chafai",
+                    role: "Head of Data, Sand Tech",
                     image: "/testimonials/thomas.png"
                 },
                 {
@@ -168,21 +168,7 @@ export const content = {
                 { title: "Model Monitoring", text: "Drift detection, Performance tracking." },
                 { title: "Automated Pipelines", text: "CI/CD, GitHub Actions." }
             ],
-            use_cases_title: "Predictive Intelligence",
-            use_cases: [
-                {
-                    title: "Demand Forecasting",
-                    description: "Using advanced time-series models (XGBoost, LSTMs) to predict future sales, reducing stockouts and minimizing capital tied up in excess inventory."
-                },
-                {
-                    title: "Customer Churn & LTV",
-                    description: "Identifying at-risk customers before they leave and scoring leads to focus your sales team on the highest-value opportunities."
-                },
-                {
-                    title: "Anomaly Detection",
-                    description: "Implementing real-time monitoring to detect fraud, equipment failure, or operational irregularities before they escalate."
-                }
-            ],
+
             policy: {
                 title: "Zero-Waste Policy",
                 text: "If a model doesn't directly improve your bottom line or save your team time, I don't build it."
@@ -230,16 +216,18 @@ export const content = {
                     image: "/projects/churn-prediction-v2.png",
                 },
                 {
-                    title: "Dynamic Pricing",
-                    sector: "E-commerce",
-                    category: "Optimization",
-                    description: "Adjust prices based on demand, time, or competitor data. Implemented regression and optimization models to maximize revenue dynamically.",
+                    title: "AnalyzeForce Sales Dashboard",
+                    sector: "Sales",
+                    category: "Dashboard / BI",
+                    description: "Interactive Power BI dashboard tracking revenue achievement, sales rep performance, and monthly targets with real-time progress visualization.",
+                    image: "/projects/analyzeforce-sales.png",
                 },
                 {
-                    title: "Demand Forecasting",
-                    sector: "Retail",
-                    category: "Time Series",
-                    description: "Predict future product demand to manage inventory. Built forecasting models using ARIMA and LSTM to optimize stock levels and reduce waste.",
+                    title: "Global Tea Export Analysis",
+                    sector: "Intl. Trade",
+                    category: "Market Intelligence",
+                    description: "Comprehensive dashboard analyzing global tea export trends, valuation ($77.1bn), and performance across key markets like China and Kenya.",
+                    image: "/projects/tea-export-market.png",
                 },
                 {
                     title: "Recommendation System",
@@ -308,12 +296,12 @@ export const content = {
             title_highlight: "d'Expertise",
             items: [
                 {
-                    title: "Data Analytics",
+                    title: "Analytics Engineering",
                     description: "Transformer les données brutes en une source de vérité fiable via des schémas en étoile robustes et pipelines scalables.",
                     points: []
                 },
                 {
-                    title: "Data Visualization",
+                    title: "Data Analytics",
                     description: "Créer des tableaux de bord intuitifs et à fort impact pour des décisions immédiates basées sur les données.",
                     points: []
                 },
@@ -395,14 +383,14 @@ export const content = {
             items: [
                 {
                     quote: "Mouad a transformé notre reporting manuel en une machine de guerre. Ce qui nous prenait 2 jours ne prend plus que 2 minutes.",
-                    author: "Sarah Martin",
+                    author: "Ahmed Tyarti",
                     role: "CFO, TechFlow Solutions",
                     image: "/testimonials/sarah.png"
                 },
                 {
                     quote: "L'audit de nos pipelines de données a révélé des failles critiques. Grâce à son intervention, nos KPI sont enfin fiables à 100%.",
-                    author: "Thomas Dubois",
-                    role: "Head of Data, RetailConnect",
+                    author: "Jawad Chafai",
+                    role: "Head of Data, Sand Tech",
                     image: "/testimonials/thomas.png"
                 },
                 {
@@ -455,16 +443,18 @@ export const content = {
                     image: "/projects/churn-prediction-v2.png",
                 },
                 {
-                    title: "Pricing Dynamique",
-                    sector: "E-commerce",
-                    category: "Optimisation",
-                    description: "Ajuster les prix en fonction de la demande, du temps ou des concurrents. Modèles de régression pour maximiser les revenus.",
+                    title: "AnalyzeForce Sales Dashboard",
+                    sector: "Ventes",
+                    category: "Dashboard / BI",
+                    description: "Dashboard Power BI interactif suivant la réalisation du chiffre d'affaires, la performance des commerciaux et les objectifs mensuels avec visualisation en temps réel.",
+                    image: "/projects/analyzeforce-sales.png",
                 },
                 {
-                    title: "Prévision de la Demande",
-                    sector: "Retail",
-                    category: "Séries Temporelles",
-                    description: "Prédire la demande future pour gérer les stocks. Modèles ARIMA et LSTM pour optimiser les niveaux de stock.",
+                    title: "Analyse Exportation Thé",
+                    sector: "Commerce Intl.",
+                    category: "Intelligence de Marché",
+                    description: "Dashboard complet analysant les tendances mondiales d'exportation de thé, la valorisation et la performance des marchés clés (Chine, Kenya).",
+                    image: "/projects/tea-export-market.png",
                 },
                 {
                     title: "Système de Recommandation",

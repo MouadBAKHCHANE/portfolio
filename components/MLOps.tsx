@@ -23,6 +23,7 @@ interface MLOpsProps {
 }
 
 export default function MLOps({ content }: MLOpsProps) {
+    if (!content) return null;
     const { badge, title_start, title_highlight, description, pillars_title, pillars, use_cases_title, use_cases, policy } = content;
 
     const pillarIcons = [
@@ -80,31 +81,33 @@ export default function MLOps({ content }: MLOpsProps) {
                 </div>
 
                 {/* Use Cases Grid */}
-                <div className="mb-24">
-                    <h3 className="text-2xl font-bold text-white mb-10 text-center">{use_cases_title}</h3>
-                    <div className="grid md:grid-cols-3 gap-8">
-                        {use_cases.map((uc: any, idx: number) => (
-                            <motion.div
-                                key={idx}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: idx * 0.1 }}
-                                className="bg-slate-800/50 border border-slate-700 p-8 rounded-2xl hover:bg-slate-800 transition-colors"
-                            >
-                                <div className="flex items-center gap-4 mb-4">
-                                    <div className="bg-slate-900 w-16 h-16 rounded-xl flex items-center justify-center border border-slate-700 shadow-lg shrink-0">
-                                        {useCaseIcons[idx]}
+                {use_cases && use_cases.length > 0 && (
+                    <div className="mb-24">
+                        <h3 className="text-2xl font-bold text-white mb-10 text-center">{use_cases_title}</h3>
+                        <div className="grid md:grid-cols-3 gap-8">
+                            {use_cases.map((uc: any, idx: number) => (
+                                <motion.div
+                                    key={idx}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: idx * 0.1 }}
+                                    className="bg-slate-800/50 border border-slate-700 p-8 rounded-2xl hover:bg-slate-800 transition-colors"
+                                >
+                                    <div className="flex items-center gap-4 mb-4">
+                                        <div className="bg-slate-900 w-16 h-16 rounded-xl flex items-center justify-center border border-slate-700 shadow-lg shrink-0">
+                                            {useCaseIcons[idx]}
+                                        </div>
+                                        <h4 className="text-xl font-bold text-white">{uc.title}</h4>
                                     </div>
-                                    <h4 className="text-xl font-bold text-white">{uc.title}</h4>
-                                </div>
-                                <p className="text-slate-400 leading-relaxed text-sm">
-                                    {uc.description}
-                                </p>
-                            </motion.div>
-                        ))}
+                                    <p className="text-slate-400 leading-relaxed text-sm">
+                                        {uc.description}
+                                    </p>
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
-                </div>
+                )}
 
                 {/* MLOps Blueprint Pills */}
                 <div className="mb-20">
