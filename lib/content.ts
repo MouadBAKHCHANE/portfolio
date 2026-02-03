@@ -137,13 +137,13 @@ export const content = {
                     quote: "Mouad transformed our manual reporting into a war machine. What took us 2 days now takes 2 minutes.",
                     author: "Ahmed Tyarti",
                     role: "CFO, TechFlow Solutions",
-                    image: "/testimonials/sarah.png"
+                    image: "/testimonials/ahmed.png"
                 },
                 {
                     quote: "The audit of our data pipelines revealed critical flaws. Thanks to his intervention, our KPIs are finally 100% reliable.",
                     author: "Jawad Chafai",
                     role: "Head of Data, Sand Tech",
-                    image: "/testimonials/thomas.png"
+                    image: "/testimonials/jawad.png"
                 },
                 {
                     quote: "Rare technical expertise coupled with real business understanding. An indispensable partner for our growth.",
@@ -385,13 +385,13 @@ export const content = {
                     quote: "Mouad a transformé notre reporting manuel en une machine de guerre. Ce qui nous prenait 2 jours ne prend plus que 2 minutes.",
                     author: "Ahmed Tyarti",
                     role: "CFO, TechFlow Solutions",
-                    image: "/testimonials/sarah.png"
+                    image: "/testimonials/ahmed.png"
                 },
                 {
                     quote: "L'audit de nos pipelines de données a révélé des failles critiques. Grâce à son intervention, nos KPI sont enfin fiables à 100%.",
                     author: "Jawad Chafai",
                     role: "Head of Data, Sand Tech",
-                    image: "/testimonials/thomas.png"
+                    image: "/testimonials/jawad.png"
                 },
                 {
                     quote: "Expertise technique rare couplée à une vraie compréhension des enjeux business. Un partenaire indispensable pour notre croissance.",
