@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, Linkedin, User, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
+
 
 interface NavbarProps {
     content: any;
@@ -101,40 +101,35 @@ export default function Navbar({ content, lang }: NavbarProps) {
             </div>
 
             {/* Mobile Nav Overlay */}
-            <AnimatePresence>
-                {isOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, y: -20, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: -20, scale: 0.95 }}
-                        className="absolute top-20 left-4 right-4 bg-white border border-slate-200 rounded-2xl p-4 shadow-xl lg:hidden"
-                    >
-                        <div className="flex flex-col gap-2">
-                            <button onClick={toggleLang} className="self-end text-slate-500 hover:text-slate-900 transition-colors flex items-center gap-2 font-medium text-sm border border-slate-200 rounded-full px-3 py-1 mb-2">
-                                <Globe size={16} /> Switch to {lang === "en" ? "French" : "English"}
-                            </button>
-                            {links.map((link: any) => (
-                                <Link
-                                    key={link.name}
-                                    href={link.href}
-                                    onClick={() => setIsOpen(false)}
-                                    className="p-3 rounded-lg hover:bg-slate-50 text-slate-600 hover:text-blue-600 font-medium transition-colors"
-                                >
-                                    {link.name}
-                                </Link>
-                            ))}
-                            <div className="h-px bg-slate-100 my-2"></div>
+            {isOpen && (
+                <div
+                    className="absolute top-20 left-4 right-4 bg-white border border-slate-200 rounded-2xl p-4 shadow-xl lg:hidden"
+                >
+                    <div className="flex flex-col gap-2">
+                        <button onClick={toggleLang} className="self-end text-slate-500 hover:text-slate-900 transition-colors flex items-center gap-2 font-medium text-sm border border-slate-200 rounded-full px-3 py-1 mb-2">
+                            <Globe size={16} /> Switch to {lang === "en" ? "French" : "English"}
+                        </button>
+                        {links.map((link: any) => (
                             <Link
-                                href="#id_contact"
+                                key={link.name}
+                                href={link.href}
                                 onClick={() => setIsOpen(false)}
-                                className="p-3 rounded-lg bg-blue-600 text-white font-bold text-center"
+                                className="p-3 rounded-lg hover:bg-slate-50 text-slate-600 hover:text-blue-600 font-medium transition-colors"
                             >
-                                {cta}
+                                {link.name}
                             </Link>
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+                        ))}
+                        <div className="h-px bg-slate-100 my-2"></div>
+                        <Link
+                            href="#id_contact"
+                            onClick={() => setIsOpen(false)}
+                            className="p-3 rounded-lg bg-blue-600 text-white font-bold text-center"
+                        >
+                            {cta}
+                        </Link>
+                    </div>
+                </div>
+            )}
         </nav>
     );
 }
